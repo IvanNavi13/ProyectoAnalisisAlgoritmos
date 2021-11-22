@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Programa JS para encontrar el prefijo comun más argo
+            
+            // Funcion para encontrar el prefijo comun entre dos cadenas (str1 & str2)
+            //@param1: cada n1 a comparar
+            //@param2: cada n2 a comparar
+            function prefijoComunDos(str1,str2)
+            {
+                let result = "";                        //Cadena donde se guardara el valor final
+                let n1 = str1.length, n2 = str2.length; //Obtenemos el tamaño
+                
+                // Comparar str1 & str2
+                for (let i = 0, j = 0; i <= (n1 - 1) && j <= (n2 - 1); i++, j++) { 
+                    
+                    if (str1[i] != str2[j]) 
+                        break;
+                    result += str1[i]; // Voy concatenando caracter x caracter, para aumentar el prefijo
+
+                }
+        
+                return (result);      //Regreso el valor final del prefijo
+            }
+            
+            // Funcion que devuelve el prefijo comun mas largo del arreglo de cadenas
+            //@param1: el arreglo de caracteres
+            //@param2: el tamaño del arreglo
+            function prefijoComunMasLargo(arr,n)
+            {
+                let prefix = arr[0];
+                
+                for (let i = 1; i <= n - 1; i++) 
+                    prefix = prefijoComunDos(prefix, arr[i]);  
+                
+                return (prefix);
+            }
+            
+            //********************************************************************************************************
+            // Programa "principal" para probar el algoritmo
+
+            let arr=["geeksforgeeks", "geeks", "geek", "geezer"];
+            let n = arr.length;
+            let ans = prefijoComunMasLargo(arr, n);
+                        
+            if (ans.length > 0)     //Si es mayor a 0, quiere decir que si existe un prefijo comun mas largo
+                document.write("El prefijo común más largo es -> ", ans);
+            else 
+                document.write("No hay un prefijo comun");
+            
+            //********************************************************************************************************
+      
+        </script>
+        
+    
+</body>
+</html>
