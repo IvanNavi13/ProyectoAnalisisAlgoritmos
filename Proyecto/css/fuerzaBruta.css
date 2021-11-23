@@ -1,0 +1,99 @@
+:root {       /*Custom properties O variables en CSS*/
+    --primario: #001B48;    /*stratos*/       
+    --secundario: #02457A;  /*regal blue*/
+    --terciario: #018ABE;   /*bondi blue*/
+    --cuarto: #97CADB;      /*morning glory*/
+    --quinto: #D6E8EE;      /*botticelli*/
+    --blanco: #FFFFFF;      /*blanco*/
+    --negro: #000000;       /*negro*/
+
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    transition: all 0.2s linear;
+    border-radius: 10px ;
+    padding: 0.5rem 1rem;
+}
+
+    .navigation ul li a:hover{
+        background: var(--terciario) ;
+    }
+
+h1{
+    margin-left: 2%;
+}
+
+a{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.header{
+    background-color: var(--secundario);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text{
+    margin-top: 100px;
+    color: var(--blanco);
+}
+
+.text p{
+    margin-left: 2%;
+}
+
+.strings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.boton{
+    margin: 40px;
+    background-color: var(--cuarto); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.boton:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
