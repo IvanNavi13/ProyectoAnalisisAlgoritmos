@@ -6,32 +6,85 @@
     --quinto: #D6E8EE;      /*botticelli*/
     --blanco: #FFFFFF;      /*blanco*/
     --negro: #000000;       /*negro*/
-
 }
 
-/*CSS principal*/
+/*CSS Globales*/
+html{
+    font-size: 62.5%;/*Se reinicia el doc html*/
+    box-sizing: border-box; /*Para no tener tanto problema con el padding*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 /* https://fonts.google.com/specimen/Quicksand?query=quicksand#standard-styles */
 body{
-    background-color: var(--terciario);
+    font-size: 1.6rem; /* 1rem = 10px */ /*Esto sirve para que se adapte mejor los diseños en paginas web de TV, relojes, tablets, etc*/   /*Se adapta más a una gran cantidad de navegadores */
     font-family: 'Quicksand', sans-serif; 
-    color: var(--quinto);
-} 
+    background:linear-gradient(to bottom, var(--terciario) 0%, var(--cuarto) 100%); /*De arriba hacia abajo el 0% indica hasta abajo y el 100% hasta arriba */ 
+    /* background-repeat: no-repeat; */
+    /* margin: 0;
+    margin-bottom: 4rem;  */
+}  
+    
+.contenedor {
+    max-width: 120rem;
+    width: auto;
+    margin: 15rem auto;
+    padding: 0;
+}
 
-head{
-    background-color: var(--primario);
+/* Tipografia */
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+/* Footer */
+.footer{
+    padding: 1rem;
+    background-color: var(--primario);   
+}
+@media (min-width: 768px) {
+    .footer{
+        background-color: var(--primario);
+        padding: 3rem 0;
+        margin-top: 2rem;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        /* position: absolute; */
+    }
+}
+
+.footer__texto{
     font-family: 'Quicksand', sans-serif; 
+    text-align: center;
+    font-size: 2rem;
     color: var(--blanco);
 }
 
 
-/*CSS para el menu principal*/
-
-.contenedor {
-    max-width: 1650px;
-    width: 95%;
-    margin: 0 auto;
+.header{
+    background-color: var(--primario);
+    padding: 2rem 0;
+    margin-top: 0rem;
+    font-family: 'Quicksand', sans-serif; 
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
 }
+
+
+/*CSS para el menu principal*/
 
 .contenedor-botones{
     display: flex;
@@ -54,9 +107,9 @@ head{
 .boton{
     background-color: var(--secundario);
     color: var(--blanco);
-    padding: 1rem 3rem;
-    margin-top: 1rem;
-    font-size: 2rem;
+    padding: 2rem 3.5rem;
+    margin-top: 5rem;
+    font-size: 2.5rem;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -72,8 +125,8 @@ head{
 }
 
 .circulo{
-    max-width: 500px;
-    height: 500px;
+    max-width: 50rem;
+    height: 50rem;
     background-color: var(--quinto);
     border-radius: 100%;
 }

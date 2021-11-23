@@ -11,6 +11,8 @@
 
 body{
     margin: 0;
+    background-color: var(--terciario);
+    font-family: 'Quicksand', sans-serif;
 }
 
 .container{
@@ -40,6 +42,7 @@ body{
 
 h1{
     margin-left: 2%;
+    color: var(--blanco);
 }
 
 a{
@@ -83,7 +86,7 @@ a{
     margin: 40px;
     background-color: var(--cuarto); 
     border: none;
-    color: white;
+    color: var(--primario);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -92,6 +95,7 @@ a{
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .boton:hover{

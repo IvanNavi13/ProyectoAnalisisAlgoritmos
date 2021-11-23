@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prefijo común más largo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style"> <!--Hacer el sitio web mas rapido-->
-    <link href="css/styles.css" rel="stylesheet">
-
-</head> 
-<body>
     <head>
-        <h1>Análisis de Algoritmos 3CM13</h1>
-    </head>
-
-    <br><br><br>
-
-    <div class="contenedor tres-columnas">
-
-        <div class="circulo elemento-menu">
-            <img class="imagen-circulo" src="./images/ESCOM.png" alt="logo-ESCOM">
-        </div>
         
-        <div class="elemento-menu">
-            <div class="contenedor-botones">
-                <a class="boton" href="./primerSolucion.html">Fuerza Bruta</a>
-                <a class="boton" href="./segundaSolucion.html">DyC</a>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prefijo común más largo</title>
+        
+        <!--HOJAS DE ESTILO-->
+        <link rel="preload" href="css/normalize.css" as="style">
+        <link rel="stylesheet" href="css/normalize.css"> <!--Tiene que ser la primera libreria por que normaliza y resetea-->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="preload" href="css/styles.css" as="style"> <!--Hacer el sitio web mas rapido-->
+        <link href="css/styles.css" rel="stylesheet">
+
+    </head> 
+
+    <body>
+
+        <header>
+            <h1 class="header">Análisis de Algoritmos 3CM13</h1>
+        </header>
+
+        <!-- <br><br><br> -->
+        
+        <section class="contenedor">
+
+            <div class="tres-columnas">
+        
+                <div class="circulo elemento-menu">
+                    <img class="imagen-circulo" src="./images/ESCOM.png" alt="logo-ESCOM">
+                </div>
+                
+                <div class="elemento-menu">
+                    <div class="contenedor-botones">
+                        <a class="boton" href="./primerSolucion.html">Fuerza Bruta</a>
+                        <a class="boton" href="./segundaSolucion.html">DyC</a>
+                    </div>
+                </div>
+        
+                <div class="circulo elemento-menu">
+                    <img class="imagen-circulo" src="./images/IPN.png" alt="logo-ESCOM">
+                </div>
+            
             </div>
-        </div>
 
-        <div class="circulo elemento-menu">
-            <img class="imagen-circulo" src="./images/IPN.png" alt="logo-ESCOM">
-        </div>
-    
-    </div>
+        </section>
 
 
-    <footer></footer>
+        <footer class="footer">
+            <p class="footer__texto">Profesor: Franco Martínez Edgardo Adrian</p>
+            <p class="footer__texto">Derechos Reservados &copy;</p>
+            <p class="footer__texto">Autores: Cortés Coria Luis David || Cortés Lugo Arturo || Figueroa de la Torre Heidi Fernanda || Garcia Garcia Cano Ivan </p>
+        </footer>
 
 
-</body>
+    </body>
 </html>
