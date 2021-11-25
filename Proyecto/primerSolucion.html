@@ -10,6 +10,20 @@
     <!-- <link rel="preload" href="css/styles.css" as="style"> 
     <link href="css/styles.css" rel="stylesheet"> -->
     <link href="css/fuerzaBruta.css" rel="stylesheet">
+    <link href="css/flecha.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            function obtener(){
+            const str1 = document.getElementById("str1").value;
+            const str2 = document.getElementById("str2").value;
+            const str3 = document.getElementById("str3").value;
+            const str4 = document.getElementById("str4").value;
+            document.getElementById("palabra1").innerHTML = str1;
+            document.getElementById("palabra2").innerHTML = str2;
+            document.getElementById("palabra3").innerHTML = str3;
+            document.getElementById("palabra4").innerHTML = str4;
+        }
+        </script>
 
 </head>
 <body>
@@ -39,9 +53,18 @@
         </div>
 
         <div>
-            <button class="boton" name="comenzar" type="button"> Comenzar </button>
+            <button class="boton" name="comenzar" type="button" onclick="obtener()"> Comenzar </button>
         </div>
     </main>
+
+    <div class="palabras">
+        <h1 id="palabra1"></h1>
+        <h1 id="palabra2"></h1>
+        <h1 id="palabra3"></h1>
+        <h1 id="palabra4"></h1>
+    </div>
+
+    <div class="flecha derecha"></div>
 
 </body>
 </html>

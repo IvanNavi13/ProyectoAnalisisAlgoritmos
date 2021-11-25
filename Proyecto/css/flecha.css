@@ -1,0 +1,63 @@
+:root {       /*Custom properties O variables en CSS*/
+    --primario: #001B48;    /*stratos*/       
+    --secundario: #02457A;  /*regal blue*/
+    --terciario: #018ABE;   /*bondi blue*/
+    --cuarto: #97CADB;      /*morning glory*/
+    --quinto: #D6E8EE;      /*botticelli*/
+    --blanco: #FFFFFF;      /*blanco*/
+    --negro: #000000;       /*negro*/
+
+}
+
+#palabra1{
+    margin-top: 1%;
+    margin-left: 300px;
+    margin-bottom: -2px;
+}
+
+#palabra2{
+    margin-top: 1%;
+    margin-left: 50px;
+    margin-bottom: -11.5%;
+}
+
+#palabra3{
+    margin-top: 1%;
+    margin-left: 50px;
+    margin-bottom: -11.5%;
+}
+
+#palabra4{
+    margin-top: 1%;
+    margin-left: 50px;
+    margin-right: 300px;
+    margin-bottom: -11.5%;
+}
+
+.flecha{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-top: 2px;
+    margin-left: 300px;
+    border-top: solid 5px;
+    border-right: solid 5px;
+    animation-name: flecha;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.flecha.derecha{
+   transform: rotate(315deg);
+}
+
+
+
+@keyframes flecha{
+    0% {opacity: 0; left: 0px; top: 100px}
+    50%{opacity: .4;}
+    100% {opacity: 100; top:0px}
+}
+
+
+
