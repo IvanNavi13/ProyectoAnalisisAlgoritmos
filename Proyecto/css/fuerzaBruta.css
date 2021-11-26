@@ -6,6 +6,9 @@
     --quinto: #D6E8EE;      /*botticelli*/
     --blanco: #FFFFFF;      /*blanco*/
     --negro: #000000;       /*negro*/
+    --blanco2: #E1E0E0;
+    --gris: #DFDFDF;
+    --gris2: #C1C1C1;
 
 }
 
@@ -85,7 +88,7 @@ a{
 
 .boton{
     margin: 40px;
-    background-color: var(--cuarto); 
+    background-color: var(--gris2); 
     border: none;
     color: var(--primario);
     padding: 15px 32px;
@@ -97,8 +100,57 @@ a{
     transition-duration: 0.4s;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    border-radius: .3rem; /*Para tener las esquinas redondeadas*/
 }
 
 .boton:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.entrada-texto{
+    background-color: var(--blanco2);
+    margin-top: auto;
+    padding: 8px;
+    width: 15%;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: var(--negro);
+    border-radius: .5rem; /*Para tener las esquinas redondeadas*/
+    border: none;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+
+}
+.contenedor-codigos{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--cuarto);
+    padding: 45px;
+}
+
+.contenedor-explicacion{
+    background-color: var(--primario);
+}
+
+.codigo-uno{
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 25px;
+}
+
+.codigo-dos{
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 25px;
+    
 }
