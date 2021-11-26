@@ -82,11 +82,6 @@ a{
     margin-right: 2%;
 }
 
-.palabras{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .boton{
     margin: 40px;

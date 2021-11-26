@@ -22,7 +22,38 @@
             document.getElementById("palabra2").innerHTML = str2;
             document.getElementById("palabra3").innerHTML = str3;
             document.getElementById("palabra4").innerHTML = str4;
+
+            var repeticiones= 3;
+            
+            var item = document.getElementById("flechas");
+        
+            document.getElementById("flechas").animate([
+            // keyframes
+            { transform: 'translateX(20px)' },
+            { transform: 'translateX(61.2px)' },
+            { transform: 'delay:1s'}
+            ], {
+            // timing options
+            duration: 2000,
+            iterations: 3
+            });
+            //var longitud = document.getElementById("palabra2").style.marginLeft;
+            
         }
+        </script>
+
+        <script>
+            function mover(){
+            document.getElementById("flechaI").style.display= "block"
+            document.getElementById("flechaD").style.display= "block"
+            var l = document.getElementById("palabra2");
+            var lon = l.currentStyle || window.getComputedStyle(l);
+            var p = lon.marginLeft;
+            var q = "61.2px";
+            p = parseInt( p, 10 ) + parseInt( q, 10 ) + "px";
+            alert("hola=" +p);
+            document.getElementById("flechaD").style.marginLeft= p;
+             }
         </script>
 
 </head>
@@ -53,10 +84,10 @@
         </div>
 
         <div>
-            <button class="boton" name="comenzar" type="button" onclick="obtener()"> Comenzar </button>
+            <button class="boton" name="comenzar" type="button" onclick="mover(), obtener()"> Comenzar </button>
         </div>
     </main>
-
+    
     <div class="palabras">
         <h1 id="palabra1"></h1>
         <h1 id="palabra2"></h1>
@@ -64,7 +95,10 @@
         <h1 id="palabra4"></h1>
     </div>
 
-    <div class="flecha derecha"></div>
+    <div id="flechas">
+        <div id="flechaI" class="flecha1 derecha"></div>
+        <div id="flechaD" class="flecha2 derecha"></div>
+    </div>
 
 </body>
 </html>

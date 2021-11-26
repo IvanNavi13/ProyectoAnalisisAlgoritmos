@@ -9,6 +9,11 @@
 
 }
 
+.palabras{
+    display: flex;
+    align-items: center;
+}
+
 #palabra1{
     margin-top: 1%;
     margin-left: 300px;
@@ -17,46 +22,67 @@
 
 #palabra2{
     margin-top: 1%;
-    margin-left: 50px;
-    margin-bottom: -11.5%;
+    margin-left: 200px;
+    margin-bottom: -2px;
 }
 
 #palabra3{
     margin-top: 1%;
-    margin-left: 50px;
-    margin-bottom: -11.5%;
+    margin-left: 200px;
+    margin-bottom: -2px;
 }
 
 #palabra4{
     margin-top: 1%;
-    margin-left: 50px;
+    margin-left: 200px;
     margin-right: 300px;
-    margin-bottom: -11.5%;
+    margin-bottom: -2px;
 }
 
-.flecha{
-    display: inline-block;
+#flechas{
+    display: flex;
+    align-items: center;
+}
+
+.flecha1{
     width: 8px;
     height: 8px;
     margin-top: 2px;
-    margin-left: 300px;
+    margin-left: 305px;
     border-top: solid 5px;
     border-right: solid 5px;
     animation-name: flecha;
     animation-duration: 0.5s;
-    position: relative;
+    animation-timing-function: linear;
+    display: none;
 }
 
-.flecha.derecha{
+.flecha1.derecha{
    transform: rotate(315deg);
 }
 
 
+.flecha2{
+    width: 8px;
+    height: 8px;
+    margin-top: 2px;
+    margin-right: 300px;
+    border-top: solid 5px;
+    border-right: solid 5px;
+    animation-name: flecha;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    display: none;
+}
+
+.flecha2.derecha{
+   transform: rotate(315deg);
+}
 
 @keyframes flecha{
     0% {opacity: 0; left: 0px; top: 100px}
     50%{opacity: .4;}
-    100% {opacity: 100; top:0px}
+    100%{opacity: 100; top:0px}
 }
 
 
