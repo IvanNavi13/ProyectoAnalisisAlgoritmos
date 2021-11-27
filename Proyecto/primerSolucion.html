@@ -30,7 +30,7 @@
 
     <script>
         function moverFlecha(x) {
-            var p = (document.getElementById("palabra5").clientWidth - 5) + "px";
+            var p = (document.getElementById("palabra5").clientWidth - 8) + "px";
             //  alert("= "+p);
             var item = document.getElementById("flechas");
 
@@ -128,7 +128,7 @@
             //var q = (x-1) * 20 +15;
             //else
             var w = document.getElementById("palabra1").clientWidth;
-            w = w - 11;
+            w = w - 20;
             p = parseInt(p, 10) + w + "px";
             //alert("= " +w);
             document.getElementById("flechaD").style.marginLeft = p;
