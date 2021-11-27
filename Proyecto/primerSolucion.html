@@ -27,14 +27,14 @@
         </script>
 
         <script>
-            function moverFlecha(x){
-            var p = (x-0.8)*18 +"px";  
-
+            function moverFlecha(x){ 
+            var p = (document.getElementById("palabra5").clientWidth - 5) + "px";
+              //  alert("= "+p);
             var item = document.getElementById("flechas");
         
             document.getElementById("flechas").animate([
             // keyframes
-            { transform: 'translateX(20px)' },
+            { transform: 'translateX(18px)' },
             { transform: 'translateX('+p+')' },
             { transform: 'delay:1s'}
             ], {
@@ -90,7 +90,7 @@
         let ans = prefijoComunMasLargo(arr, n);
                     
         if (ans.length > 0){     //Si es mayor a 0, quiere decir que si existe un prefijo comun mas largo
-            document.getElementById("palabra5").innerHTML =  ans;
+            document.getElementById("palabra5").innerHTML = ans;
         }
         else{ 
             alert("No hay prefijo común");
@@ -114,12 +114,13 @@
             var l = document.getElementById("palabra2");
             var lon = l.currentStyle || window.getComputedStyle(l);
             var p = lon.marginLeft;
-            if(document.getElementById("str1").value[0]=="m")
-            var q = (x-1) * 20 +15;
-            else
-            var q = (x-1) * 20 +5;
-            p = parseInt( p, 10 ) + q + "px";
-           // alert("hola=" +p);
+            //if(document.getElementById("str1").value[0]=="m")
+            //var q = (x-1) * 20 +15;
+            //else
+            var w = document.getElementById("palabra1").clientWidth;
+            w = w-11;
+            p = parseInt( p, 10 ) + w + "px";
+           //alert("= " +w);
             document.getElementById("flechaD").style.marginLeft= p;
              }
         </script>
@@ -191,8 +192,8 @@
             </div>
     
             <div>
-                <button class="boton" name="comenzar" type="button" onclick=" mover(document.getElementById('str1').value.length), 
-                obtener(), moverFlecha(prefijo()), setTimeout(prefijo,2000), setTimeout(sustituir1,4000),
+                <button class="boton" name="comenzar" type="button" onclick="  
+                obtener(), moverFlecha(prefijo()) , mover(document.getElementById('str1').value.length),setTimeout(prefijo,2000), setTimeout(sustituir1,4000),
                 setTimeout(sustituir2,8500), setTimeout(sustituir3,11000)"> 
                 Comenzar </button>
             </div>
@@ -210,7 +211,7 @@
             <div id="flechaD" class="flecha2 derecha"></div>
         </div>
 
-        <div>
+        <div class="palabras">
             <h1 id="palabra5"></h1>
         </div>
 
