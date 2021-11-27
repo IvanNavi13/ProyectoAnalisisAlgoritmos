@@ -39,6 +39,12 @@
     margin-bottom: -2px;
 }
 
+#palabra5{
+    margin-top: 3%;
+    margin-left: 410px;
+    margin-bottom: 4%;
+}
+
 #flechas{
     display: flex;
     align-items: center;
@@ -81,7 +87,6 @@
 
 @keyframes flecha{
     0% {opacity: 0; left: 0px; top: 100px}
-    50%{opacity: .4;}
     100%{opacity: 100; top:0px}
 }
 
