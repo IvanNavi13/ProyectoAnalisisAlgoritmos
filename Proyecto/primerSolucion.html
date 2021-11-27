@@ -114,6 +114,9 @@
             var l = document.getElementById("palabra2");
             var lon = l.currentStyle || window.getComputedStyle(l);
             var p = lon.marginLeft;
+            if(document.getElementById("str1").value[0]=="m")
+            var q = (x-1) * 20 +15;
+            else
             var q = (x-1) * 20 +5;
             p = parseInt( p, 10 ) + q + "px";
            // alert("hola=" +p);
