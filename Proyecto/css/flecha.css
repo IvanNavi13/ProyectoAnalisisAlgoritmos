@@ -6,12 +6,26 @@
     --quinto: #D6E8EE;      /*botticelli*/
     --blanco: #FFFFFF;      /*blanco*/
     --negro: #000000;       /*negro*/
-
+    --blanco2: #E1E0E0;
+    --gris: #DFDFDF;
+    --gris2: #C1C1C1;
+    --amarillo: #FFE572;
+    --amarillo2: #FFD51A;
+    --amarillo3: #FFC61A;
+    --rojo: #B60020;
+    --rojo2: #F35A75;
 }
 
 .palabras{
     display: flex;
     align-items: center;
+}
+
+.palabra-prefijo{
+    display: flex;
+    align-items: center;
+    color: var(--primario);
+    font-weight: bold;
 }
 
 #palabra1{
@@ -52,9 +66,10 @@
 }
 
 .flecha1{
-    width: 8px;
-    height: 8px;
-    margin-top: 2px;
+    color: var(--rojo);
+    width: 13px;
+    height: 13px;
+    margin-top: 11px;
     margin-left: 300px;
     border-top: solid 5px;
     border-right: solid 5px;
@@ -70,9 +85,10 @@
 
 
 .flecha2{
-    width: 8px;
-    height: 8px;
-    margin-top: 2px;
+    color: var(--rojo);
+    width: 13px;
+    height: 13px;
+    margin-top: 11px;
     margin-right: 300px;
     border-top: solid 5px;
     border-right: solid 5px;

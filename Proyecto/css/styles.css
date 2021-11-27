@@ -6,6 +6,14 @@
     --quinto: #D6E8EE;      /*botticelli*/
     --blanco: #FFFFFF;      /*blanco*/
     --negro: #000000;       /*negro*/
+    --blanco2: #E1E0E0;
+    --gris: #DFDFDF;
+    --gris2: #C1C1C1;
+    --amarillo: #FFE572;
+    --amarillo2: #FFD51A;
+    --amarillo3: #FFC61A;
+    --rojo: #B60020;
+    --rojo2: #F35A75;
 }
 
 /*CSS Globales*/
@@ -134,4 +142,12 @@ h1,h2,h3{
     width: 100%;
     height: 100%;
     border-radius: 100%;
+}
+
+
+.boton:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: var(--quinto);
+    font-weight: bold;
+    color: var(--primario);
 }
