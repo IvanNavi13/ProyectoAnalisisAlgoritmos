@@ -1,0 +1,91 @@
+:root {       /*Custom properties O variables en CSS*/
+    --primario: #001B48;    /*stratos*/       
+    --secundario: #02457A;  /*regal blue*/
+    --terciario: #018ABE;   /*bondi blue*/
+    --cuarto: #97CADB;      /*morning glory*/
+    --quinto: #D6E8EE;      /*botticelli*/
+    --blanco: #FFFFFF;      /*blanco*/
+    --negro: #000000;       /*negro*/
+    --blanco2: #E1E0E0;
+    --gris: #DFDFDF;
+    --gris2: #C1C1C1;
+    --amarillo: #FFE572;
+    --amarillo2: #FFD51A;
+    --amarillo3: #FFC61A;
+    --rojo: #B60020;
+    --rojo2: #F35A75;
+}
+
+html{
+    font-size: 62.5%;/*Se reinicia el doc html*/
+    box-sizing: border-box; /*Para no tener tanto problema con el padding*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body{
+    margin: 0;
+    background-color: var(--terciario);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    transition: all 0.2s linear;
+    border-radius: 10px ;
+    padding: 0.5rem 1rem;
+}
+
+    .navigation ul li a:hover{
+        background: var(--terciario) ;
+    }
+
+h1{
+    margin-left: 2%;
+    color: var(--blanco);
+    font-size: 25px;
+}
+
+h2{
+    color: var(--blanco);
+    font-size: 20px;
+}
+
+a{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.header{
+    background-color: var(--secundario);
+    display: flex;
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -10,6 +10,7 @@
     <!--Hojas de estilo-->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="css/fuerzaBruta.css" rel="stylesheet">
+    <link rel="preload" href="css/fuerzaBruta.css" as="style"> <!--Hacer el sitio web mas rapido-->
     <link href="css/flecha.css" rel="stylesheet">
     <!--Scripts-->
     <script type="text/javascript">
@@ -182,7 +183,7 @@
 
     </script>
 
-    <!-- <script>
+    <script>
 
         function SoloMinusculas(e){
 
@@ -206,7 +207,7 @@
             }
         }
     
-    </script> -->
+    </script> 
 
     <script>
         function cambiarDiseñoCodigo(){
@@ -235,8 +236,7 @@
 
 
     <div class="contenedor">
-
-        <main>
+        <main class="fondo-main">
             <div class="text">
                 <h1>Instrucciones</h1>
                 <p class="texto-instrucciones"> Inserte las 4 cadenas a comparar y presione el botón comenzar.</p>
@@ -260,23 +260,24 @@
                 setTimeout(sustituir1,4000),setTimeout(sustituir2,8500), setTimeout(sustituir3,11000);"> Comenzar </button>
             </div>
 
+            <div class="palabras">
+                <h1 id="palabra1"></h1>
+                <h1 id="palabra2"></h1>
+                <h1 id="palabra3"></h1>
+                <h1 id="palabra4"></h1>
+            </div>
+    
+            <div id="flechas">
+                <div id="flechaI" class="flecha1 derecha"></div>
+                <div id="flechaD" class="flecha2 derecha"></div>
+            </div>
+    
+            <div class="palabra-prefijo">
+                <h1 id="palabra5"></h1>
+            </div>
+
         </main>
 
-        <div class="palabras">
-            <h1 id="palabra1"></h1>
-            <h1 id="palabra2"></h1>
-            <h1 id="palabra3"></h1>
-            <h1 id="palabra4"></h1>
-        </div>
-
-        <div id="flechas">
-            <div id="flechaI" class="flecha1 derecha"></div>
-            <div id="flechaD" class="flecha2 derecha"></div>
-        </div>
-
-        <div class="palabra-prefijo">
-            <h1 id="palabra5"></h1>
-        </div>
 
         <!--&nbsp; salto de linea-->
         

@@ -16,6 +16,16 @@
     --rojo2: #F35A75;
 }
 
+html{
+    font-size: 62.5%;/*Se reinicia el doc html*/
+    box-sizing: border-box; /*Para no tener tanto problema con el padding*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
 body{
     margin: 0;
     background-color: var(--terciario);
@@ -50,21 +60,25 @@ body{
 h1{
     margin-left: 2%;
     color: var(--blanco);
+    font-size: 25px;
 }
 
 h2{
     color: var(--blanco);
+    font-size: 20px;
 }
 
 a{
     font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
     color: var(--blanco);
     text-decoration: none;
 }
 
 .header{
     background-color: var(--secundario);
-    position: fixed;
+    display: flex;
+    /* position: fixed; */
     left: 0;
     top: 0;
     width: 100%;
@@ -77,7 +91,7 @@ a{
 }
 
 .text{
-    margin-top: 100px;
+    /* margin-top: 100px; */
     color: var(--blanco);
 }
 
@@ -87,41 +101,54 @@ a{
 
 .strings{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     margin-left: 2%;
     margin-right: 2%;
 }
 
-
-.boton{
-    margin: 40px;
-    background-color: var(--gris2); 
-    border: none;
-    color: var(--primario);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    border-radius: .3rem; /*Para tener las esquinas redondeadas*/
+@media (min-width: 480px) {
+    .strings{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 45px;  
+    }
 }
 
-.boton:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: var(--amarillo3);
+.boton {
+	box-shadow: 3px 5px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ffed64 5%, #ffab23 100%);
+	background-color:#ffed64;
+	border-radius:16px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color: var(--primario);
+	font-family: 'Quicksand', sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding:10px 42px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffed66;
 }
+.boton:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffed64 100%);
+	background-color:#ffab23;
+}
+.boton:active {
+	position:relative;
+	top:1px;
+}
+
+
 
 .entrada-texto{
     background-color: var(--blanco2);
+    height: 35px;
     margin-top: auto;
-    padding: 8px;
-    width: 15%;
+    margin: 10px;
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
@@ -140,23 +167,46 @@ a{
 }
 .contenedor-codigos{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     background-color: var(--cuarto);
-    padding: 45px;
+    padding: 45px;  
+    
+}
+
+@media (min-width: 480px) {
+    .contenedor-codigos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--cuarto);
+        padding: 45px;  
+    }
 }
 
 .contenedor-explicacion{
-    background-color: var(--primario);
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     background-color: var(--primario);
 }
 
+@media (min-width: 480px) { /* /480px cambia cuando es telefono/ */
+    .contenedor-explicacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--primario);
+    }
+}
+
 .contenedor-pasos{
-    height: 100px;
-    width: 450px;
+    max-height: 100px;
+    max-width: 450px;
+    margin: 22px;
     color: var(--blanco);
     text-align: justify;
+    font-size: 17px;
 }
 
 .centrar{
@@ -173,7 +223,7 @@ a{
     font-family: 'Quicksand', sans-serif;
     background-color: var(--primario);
     color: var(--blanco);
-    font-size: 18px;
+    font-size: 16px;
     padding: 25px;
     border-radius: 1rem; /*Para tener las esquinas redondeadas*/
 }
@@ -182,19 +232,29 @@ a{
     font-family: 'Quicksand', sans-serif;
     background-color: var(--primario);
     color: var(--blanco);
-    font-size: 18px;
+    font-size: 16px;
     padding: 25px;
     border-radius: 1rem; /*Para tener las esquinas redondeadas*/
 }
 
+@media (min-width: 480px) { /* /480px cambia cuando es telefono/ */
+    .codigo-uno{
+        font-size: 18px;
+    }
+    .codigo-dos{
+        font-size: 18px;
+    }
+}
+
 .titulo-codigo{
     color: var(--black);
+    /* width: 150px;  */
     text-align: center;
     font-weight: bold;
 }
 
 .titulo-explicacion{
-    background-color: var(--gris2);
+    background-color: var(--cuarto);
     color: var(--primario);
     font-size: 35px;
     padding: 0;
@@ -220,4 +280,10 @@ a{
 .texto-instrucciones{
     color: var(--quinto);
     font-weight: bold;
+    font-size: 16px;
 }
+
+.fondo-main{
+        background:linear-gradient(to bottom, var(--terciario) 0%, var(--cuarto) 100%); /*De arriba hacia abajo el 0% indica hasta abajo y el 100% hasta arriba */ 
+}
+
