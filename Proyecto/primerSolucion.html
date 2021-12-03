@@ -9,10 +9,13 @@
     <title>Fuerza Bruta</title>
     <!--Hojas de estilo-->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="css/fuerzaBruta.css" rel="stylesheet">
     <link rel="preload" href="css/fuerzaBruta.css" as="style"> <!--Hacer el sitio web mas rapido-->
     <link href="css/flecha.css" rel="stylesheet">
     <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
     <script type="text/javascript">
         
         function obtener() 
@@ -189,7 +192,7 @@
 
             key = e.keyCode || e.wich;
             tecla = String.fromCharCode(key).toString();
-            letras = "abcdefghijklmnopqrstuvwxyzáéíóú";
+            letras = "abcdefghijklmnñopqrstuvwxyzáéíóú";
             
             especiales = [8];
             tecla_especial = false;
@@ -217,6 +220,31 @@
         }
     </script>
 
+    <script>
+        function verificar_Vacio() 
+        {
+            const str1 = document.getElementById("str1").value;
+            const str2 = document.getElementById("str2").value;
+            const str3 = document.getElementById("str3").value;
+            const str4 = document.getElementById("str4").value;
+            
+        }
+    </script>
+
+    <script>
+            
+        function animar_explicacion()
+        {
+            $("#paso1").addClass("animate__animated animate__wobble animate__delay-1s");
+            $("#paso2").addClass("animate__animated animate__wobble animate__delay-3s ");
+            $("#paso3").addClass("animate__animated animate__wobble animate__delay-5s ");
+        
+        }
+
+    </script>
+
+
+
 </head>
 
 
@@ -225,7 +253,7 @@
 
     <header class="header">
         <div class="container logo-nav-container">
-            <h1>Fuerza Bruta</h1>
+            <h1 class="animate__animated animate__pulse animate__infinite	infinite">Fuerza Bruta</h1>
             <nav class="navigation">
                 <ul>
                     <li><a href="./index.html"> Regresar al menú</a></li>
@@ -255,16 +283,18 @@
             <br><br>
 
             <div class="centrar-flex">
-                <button class="boton" name="comenzar" type="button" onclick=" 
+                <button class="boton" name="comenzar" type="button" onclick=" verificar_Vacio(); animar_explicacion();
                 obtener(), moverFlecha(prefijo()) , mover(document.getElementById('str1').value.length),setTimeout(prefijo,2000),
                 setTimeout(sustituir1,4000),setTimeout(sustituir2,8500), setTimeout(sustituir3,11000);"> Comenzar </button>
             </div>
 
-            <div class="palabras">
-                <h1 id="palabra1"></h1>
-                <h1 id="palabra2"></h1>
-                <h1 id="palabra3"></h1>
-                <h1 id="palabra4"></h1>
+            <br><br><br>
+
+            <div class="palabras centrar-flex">
+                <h1 id="palabra1" style="color: #02457A;"></h1>
+                <h1 id="palabra2" style="color: #02457A;"></h1>
+                <h1 id="palabra3" style="color: #02457A;"></h1>
+                <h1 id="palabra4" style="color: #02457A;"></h1>
             </div>
     
             <div id="flechas">
@@ -272,14 +302,12 @@
                 <div id="flechaD" class="flecha2 derecha"></div>
             </div>
     
-            <div class="palabra-prefijo">
-                <h1 id="palabra5"></h1>
+            <div class="palabra-prefijo centrar-flex">
+                <h1 id="palabra5" style="color: #B60020;"></h1>
             </div>
 
         </main>
 
-
-        <!--&nbsp; salto de linea-->
         
         <div class="titulo-explicacion">
             <p>Explicación del Algoritmo</p>
@@ -288,22 +316,22 @@
         <div class="contenedor-explicacion">
 
             <div>
-                <h2 class="centrar">PASO 1</h2>
+                <h2 class="centrar" id="paso1">PASO 1</h2>
                 <p class="contenedor-pasos"> Se seleccionan 2 cadenas para que asi se empiece a comparar caracter por
                     caracter,de inicio a fin. </p>
             </div>
 
             <div>
-                <h2 class="centrar">PASO 2</h2>
+                <h2 class="centrar" id="paso2">PASO 2</h2>
                 <p class="contenedor-pasos">Dichos caracteres serán almacenados en la variable prefix, la cual nos
                     indica el prefijo común más largo hasta el momento.</p>
             </div>
 
             <div>
-                <h2 class="centrar">PASO 3</h2>
+                <h2 class="centrar" id="paso3">PASO 3</h2>
                 <p class="contenedor-pasos">Si se obtuvo un prefijo con las cadenas utilizadas, dicho prefijo se
-                    comparará con la siguiente cadena. &nbsp; Finalmente, se vuelve a repetir el mismo proceso con las cadenas
-                    faltantes, que para este ejemplo son 4.</p>
+                    comparará con la siguiente cadena. <br> Finalmente, se vuelve a repetir el mismo proceso con las cadenas
+                    faltantes, que para este ejemplo son 4.</p> <br>
             </div>
 
         </div><!--.contenedor-explicacion-->
@@ -316,13 +344,13 @@
                 <div class="codigo-uno">
                     <p id="codigo-uno-1">function prefijoComunDos(str1,str2)</p>
                     <p id="codigo-uno-2">{</p>
-                    <p id="codigo-uno-3">let result = "";</p>
-                    <p id="codigo-uno-4">let n1 = str1.length, n2 = str2.length;</p>
-                    <p id="codigo-uno-5">for (let i = 0, j = 0; i <= (n1 - 1) && j <=(n2 - 1); i++, j++) { </p>
-                    <p id="codigo-uno-6">if (str1[i] != str2[j]) </p>
-                    <p id="codigo-uno-7"> break;</p>
-                    <p id="codigo-uno-8">result += str1[i];</p>
-                    <p id="codigo-uno-9">}</p>
+                    <p id="codigo-uno-3"> &nbsp;&nbsp; let result = "";</p>
+                    <p id="codigo-uno-4"> &nbsp;&nbsp; let n1 = str1.length, n2 = str2.length;</p>
+                    <p id="codigo-uno-5"> &nbsp;&nbsp; for (let i = 0, j = 0; i <= (n1 - 1) && j <=(n2 - 1); i++, j++) { </p>
+                    <p id="codigo-uno-6"> &nbsp;&nbsp;&nbsp;&nbsp; if (str1[i] != str2[j]) </p>
+                    <p id="codigo-uno-7"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+                    <p id="codigo-uno-8"> &nbsp;&nbsp;&nbsp;&nbsp; result += str1[i];</p>
+                    <p id="codigo-uno-9"> &nbsp;&nbsp;&nbsp; }</p>
                     <p id="codigo-uno-10">return (result);</p>
                     <p id="codigo-uno-11">}</p>
 
@@ -334,10 +362,10 @@
                 <div class="codigo-dos">
                     <p id="codigo-dos-1">function prefijoComunMasLargo(arr,n)</p>
                     <p id="codigo-dos-2">{</p>
-                    <p id="codigo-dos-3">let prefix = arr[0];</p>
-                    <p id="codigo-dos-4">for (let i = 1; i <= n - 1; i++) </p>
-                    <p id="codigo-dos-5">prefix = prefijoComunDos(prefix, arr[i]); </p>
-                    <p id="codigo-dos-6">return (prefix);</p>
+                    <p id="codigo-dos-3">&nbsp;&nbsp;&nbsp;&nbsp; let prefix = arr[0];</p>
+                    <p id="codigo-dos-4">&nbsp;&nbsp;&nbsp;&nbsp; for (let i = 1; i <= n - 1; i++) </p>
+                    <p id="codigo-dos-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prefix = prefijoComunDos(prefix, arr[i]); </p>
+                    <p id="codigo-dos-6">&nbsp;&nbsp;&nbsp;&nbsp; return (prefix);</p>
                     <p id="codigo-dos-7">}</p>
                 </div>
             </div>

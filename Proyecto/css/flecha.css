@@ -26,9 +26,12 @@
     align-items: center;
     color: var(--primario);
     font-weight: bold;
+    text-align: center;
 }
 
 #palabra1{
+    display: flex;
+    align-items: center;
     margin-top: 1%;
     margin-left: 300px;
     margin-right: 0;
@@ -67,8 +70,8 @@
 
 .flecha1{
     color: var(--rojo);
-    width: 13px;
-    height: 13px;
+    width: 16px;
+    height: 16px;
     margin-top: 11px;
     margin-left: 300px;
     border-top: solid 5px;
@@ -86,8 +89,8 @@
 
 .flecha2{
     color: var(--rojo);
-    width: 13px;
-    height: 13px;
+    width: 16px;
+    height: 16px;
     margin-top: 11px;
     margin-right: 300px;
     border-top: solid 5px;

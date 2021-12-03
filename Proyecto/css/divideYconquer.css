@@ -89,3 +89,219 @@ a{
     justify-content: space-between;
     align-items: center;
 }
+
+.text{
+    /* margin-top: 100px; */
+    color: var(--blanco);
+}
+
+.text p{
+    margin-left: 2%;
+}
+
+.strings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+@media (min-width: 480px) {
+    .strings{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 45px;  
+    }
+}
+
+.boton {
+	box-shadow: 3px 5px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ffed64 5%, #ffab23 100%);
+	background-color:#ffed64;
+	border-radius:16px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color: var(--primario);
+	font-family: 'Quicksand', sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding:10px 42px;
+    margin: 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffed66;
+}
+.boton:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffed64 100%);
+	background-color:#ffab23;
+}
+.boton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.entrada-texto{
+    background-color: var(--blanco2);
+    width: 250px;
+    height: 35px;
+    margin-top: auto;
+    margin: 10px;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: var(--negro);
+    border-radius: .5rem; /*Para tener las esquinas redondeadas*/
+    border: none;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+
+}
+.contenedor-codigos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--cuarto);
+    padding: 45px;  
+    
+}
+
+@media (min-width: 480px) {
+    .contenedor-codigos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--cuarto);
+        padding: 45px;  
+    }
+}
+
+.contenedor-explicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--primario);
+}
+
+@media (min-width: 480px) { /* /480px cambia cuando es telefono/ */
+    .contenedor-explicacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--primario);
+    }
+}
+
+.contenedor-pasos{
+    max-height: 100px;
+    max-width: 450px;
+    margin: 22px;
+    color: var(--blanco);
+    text-align: justify;
+    font-size: 17px;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.centrar-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.separar-flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.codigo-uno{
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--primario);
+    color: var(--blanco);
+    font-size: 16px;
+    padding: 25px;
+    border-radius: 1rem; /*Para tener las esquinas redondeadas*/
+}
+
+.codigo-dos{
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--primario);
+    color: var(--blanco);
+    font-size: 16px;
+    padding: 25px;
+    border-radius: 1rem; /*Para tener las esquinas redondeadas*/
+}
+
+@media (min-width: 480px) { /* /480px cambia cuando es telefono/ */
+    .codigo-uno{
+        font-size: 18px;
+    }
+    .codigo-dos{
+        font-size: 18px;
+    }
+}
+
+.titulo-codigo{
+    color: var(--black);
+    /* width: 150px;  */
+    text-align: center;
+    font-weight: bold;
+}
+
+.titulo-explicacion{
+    background-color: var(--cuarto);
+    color: var(--primario);
+    font-size: 35px;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.codigo-uno:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: var(--quinto);
+    font-weight: bold;
+    color: var(--primario);
+}
+
+.codigo-dos:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: var(--quinto);
+    font-weight: bold;
+    color: var(--primario);
+}
+
+.texto-instrucciones{
+    color: var(--quinto);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.fondo-main{
+        background:linear-gradient(to bottom, var(--terciario) 0%, var(--cuarto) 100%); /*De arriba hacia abajo el 0% indica hasta abajo y el 100% hasta arriba */ 
+}
+
+.palabra-cuadro{
+    width:300px;
+    height:55px;
+    padding:15px;
+    font-weight:bold;
+    text-align: center;
+    font-size: 22px;    
+    background-color: var(--secundario);
+    color: var(--quinto);
+    border-radius: 2.5rem; /*Para tener las esquinas redondeadas*/
+}

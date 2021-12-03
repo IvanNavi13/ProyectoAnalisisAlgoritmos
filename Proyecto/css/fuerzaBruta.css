@@ -146,10 +146,11 @@ a{
 
 .entrada-texto{
     background-color: var(--blanco2);
+    width: 250px;
     height: 35px;
     margin-top: auto;
     margin: 10px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     color: var(--negro);
