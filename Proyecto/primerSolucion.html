@@ -26,8 +26,7 @@
             const str4 = document.getElementById("str4").value;
             document.getElementById("palabra1").innerHTML = str1;
             document.getElementById("palabra2").innerHTML = str2;
-            document.getElementById("palabra3").innerHTML = str3;
-            document.getElementById("palabra4").innerHTML = str4;
+            prefijo();
         }
     </script>
 
@@ -124,6 +123,7 @@
         function mover(x) {
 
             document.getElementById("flechaI").style.display = "block"
+            document.getElementById("flechaI").style.marginLeft =  -(document.getElementById('palabra2').clientWidth - 5) + "px";
             document.getElementById("flechaD").style.display = "block"
             var l = document.getElementById("palabra2");
             var lon = l.currentStyle || window.getComputedStyle(l);
@@ -140,51 +140,41 @@
         }
     </script>
 
-    <script>
+<script>
 
-        function sustituir1() {
+    function sustituir() {
+            const str3 = document.getElementById("str3").value;
+            document.getElementById("palabra1").innerHTML = document.getElementById("palabra5").innerHTML;
+            document.getElementById("palabra2").innerHTML = str3;
+            prefijo();   
+            mover(document.getElementById('palabra1').clientWidth);
+            moverFlecha(prefijo());       
+    }
 
-            if (prefijo() != -1) {
-                document.getElementById("palabra1").innerHTML = document.getElementById("palabra5").innerHTML;
-                document.getElementById("palabra2").innerHTML = document.getElementById("palabra3").innerHTML;
-                document.getElementById("palabra3").innerHTML = document.getElementById("palabra4").innerHTML;
-                document.getElementById("palabra4").innerHTML = "";
+</script>
 
-                mover(document.getElementById("palabra1").innerHTML.length);
-                moverFlecha(prefijo());
-                setTimeout(prefijo, 1000);
-            }
+<script>
 
-        }
+function sustituir2() {
+        const str4 = document.getElementById("str4").value;
+        document.getElementById("palabra1").innerHTML = document.getElementById("palabra5").innerHTML;
+        document.getElementById("palabra2").innerHTML = str4;
+        prefijo();    
+        mover(document.getElementById('palabra1').clientWidth);
+        moverFlecha(prefijo());      
+}
 
-        function sustituir2() {
+</script>
 
-            if (prefijo() != -1) {
-                document.getElementById("palabra1").innerHTML = document.getElementById("palabra5").innerHTML;
-                document.getElementById("palabra2").innerHTML = document.getElementById("palabra3").innerHTML;
-                document.getElementById("palabra3").innerHTML = "";
+<script>
 
-                mover(document.getElementById("palabra1").innerHTML.length);
-                moverFlecha(prefijo());
-                setTimeout(prefijo, 1000);
-            }
+function mostrar() {
+        const prefijo = document.getElementById("palabra5").innerHTML;
+        document.getElementById("final").innerHTML = "El prefijo mas largo es: " + prefijo;
+        prefijo();          
+}
 
-        }
-
-        function sustituir3() {
-
-            if (prefijo() != -1) {
-                document.getElementById("palabra1").innerHTML = document.getElementById("palabra5").innerHTML;
-                document.getElementById("palabra2").innerHTML = "";
-                document.getElementById("palabra1").innerHTML = "Prefijo común más largo es: " + document.getElementById("palabra5").innerHTML;
-                document.getElementById("palabra5").innerHTML = "";
-                document.getElementById("flechaI").style.display = "none";
-                document.getElementById("flechaD").style.display = "none";
-            }
-
-        }
-
-    </script>
+</script>
 
     <script>
 
@@ -283,9 +273,9 @@
             <br><br>
 
             <div class="centrar-flex">
-                <button class="boton" name="comenzar" type="button" onclick=" verificar_Vacio(); animar_explicacion();
-                obtener(), moverFlecha(prefijo()) , mover(document.getElementById('str1').value.length),setTimeout(prefijo,2000),
-                setTimeout(sustituir1,4000),setTimeout(sustituir2,8500), setTimeout(sustituir3,11000);"> Comenzar </button>
+                <button class="boton" name="comenzar" type="button" onclick=" verificar_Vacio(), animar_explicacion(),
+                obtener(), moverFlecha(prefijo()) , mover(document.getElementById('str1').value.length), 
+                setTimeout(sustituir, 2500), setTimeout(sustituir2, 5000), setTimeout(mostrar, 7500);"> Comenzar </button>
             </div>
 
             <br><br><br>
@@ -293,8 +283,6 @@
             <div class="palabras centrar-flex">
                 <h1 id="palabra1" style="color: #02457A;"></h1>
                 <h1 id="palabra2" style="color: #02457A;"></h1>
-                <h1 id="palabra3" style="color: #02457A;"></h1>
-                <h1 id="palabra4" style="color: #02457A;"></h1>
             </div>
     
             <div id="flechas">
@@ -305,6 +293,8 @@
             <div class="palabra-prefijo centrar-flex">
                 <h1 id="palabra5" style="color: #B60020;"></h1>
             </div>
+
+            <div> <h1 id= "final"></h1> </div>
 
         </main>
 

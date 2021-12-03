@@ -19,6 +19,8 @@
 .palabras{
     display: flex;
     flex-direction: row;
+    margin-left: 50%;
+    margin-right: 50%;
 }
 
 .palabra-prefijo{
@@ -33,39 +35,32 @@
     display: flex;
     align-items: center;
     margin-top: 1%;
-    margin-left: 300px;
     margin-right: 0;
     margin-bottom: -2px;
 }
 
 #palabra2{
     margin-top: 1%;
-    margin-left: 200px;
-    margin-bottom: -2px;
-}
-
-#palabra3{
-    margin-top: 1%;
-    margin-left: 200px;
-    margin-bottom: -2px;
-}
-
-#palabra4{
-    margin-top: 1%;
-    margin-left: 200px;
-    margin-right: 300px;
+    margin-left: 80px;
     margin-bottom: -2px;
 }
 
 #palabra5{
     margin-top: 3%;
-    margin-left: 410px;
+    margin-left: 50%;
+    margin-right: 50%;
     margin-bottom: 4%;
 }
 
+#final{
+    align-items: center;
+ }
+ 
+
 #flechas{
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .flecha1{
@@ -73,13 +68,13 @@
     width: 16px;
     height: 16px;
     margin-top: 11px;
-    margin-left: 300px;
     border-top: solid 5px;
     border-right: solid 5px;
     animation-name: flecha;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     display: none;
+    
 }
 
 .flecha1.derecha{
@@ -92,7 +87,6 @@
     width: 16px;
     height: 16px;
     margin-top: 11px;
-    margin-right: 300px;
     border-top: solid 5px;
     border-right: solid 5px;
     animation-name: flecha;
