@@ -28,7 +28,7 @@ html{
 
 body{
     margin: 0;
-    background-color: var(--terciario);
+    background-color: var(--cuarto);
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -286,5 +286,28 @@ a{
 
 .fondo-main{
         background:linear-gradient(to bottom, var(--terciario) 0%, var(--cuarto) 100%); /*De arriba hacia abajo el 0% indica hasta abajo y el 100% hasta arriba */ 
+}
+
+.palabra-final{
+    color: var(--primario);
+    font-weight: bold;
+}
+
+.explicacion-problema{
+    font-size: 16px;
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenedor-cota{
+    background-color: var(--primario);
+    padding: 10px;
+    color: var(--blanco);
+    text-align: center;
+    font-size: 18px;
+}
+.negritas{
+    font-weight: bold;
 }
 

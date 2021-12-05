@@ -170,7 +170,7 @@ function sustituir2() {
 
 function mostrar() {
         const prefijo = document.getElementById("palabra5").innerHTML;
-        document.getElementById("final").innerHTML = "El prefijo mas largo es: " + prefijo;
+        document.getElementById("final").innerHTML = "El prefijo más largo es: " + prefijo;
         prefijo();          
 }
 
@@ -256,9 +256,14 @@ function mostrar() {
     <div class="contenedor">
         <main class="fondo-main">
             <div class="text">
-                <h1>Instrucciones</h1>
+                <p class="explicacion-problema">EXPLICACIÓN DEL PROBLEMA <br> Un prefijo se define como un elemento gramatical que se adhiere a un término para cambiar su significado,
+                    es decir que, se anteponen a la palabra que se desea modificar.<br> Entonces, dado un conjunto de cadenas (4)
+                    se encontrará la cadena de prefijo común más larga, que es el prefijo de todas las cadenas dadas.
+                </p>
+                <h1 style>Instrucciones</h1>
                 <p class="texto-instrucciones"> Inserte las 4 cadenas a comparar y presione el botón comenzar.</p>
                 <p class="texto-instrucciones"> NOTA: Las palabras tienen que estar en minusculas.</p>
+                
             </div>
 
             <br><br>
@@ -294,7 +299,9 @@ function mostrar() {
                 <h1 id="palabra5" style="color: #B60020;"></h1>
             </div>
 
-            <div> <h1 id= "final"></h1> </div>
+            <div class="centrar-flex">
+                 <h1 id= "final" class="palabra-final"></h1>
+            </div>
 
         </main>
 
@@ -361,6 +368,17 @@ function mostrar() {
             </div>
 
         </div> <!--.contenedor-codigos-->
+
+        <div class="contenedor-cota">
+            <div>
+                <p style="font-size: 20px;" class="negritas">Análisis de la Cota</p>
+                <p>El análisis de la cota se realizó teniendo en cuenta el peor caso del algoritmo,
+                     que se da cuando todas las palabras que se encuentran en el String para obtener
+                      su prefijo común más largo  es la misma palabra. De esta manera la cota es <span class="negritas">O(n1*n)</span>, 
+                       en donde “n1” representa el número de caracteres que tiene la palabra y “n” representa
+                        el número de palabras contenidas en el String para sacar su prefijo común más largo  </p>
+            </div>
+        </div>
 
     </div> <!--.contenedor-->
 

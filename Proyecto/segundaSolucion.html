@@ -52,7 +52,7 @@
             const str4 = document.getElementById("str4").value;
 
             if(str1 == "" || str2 == "" || str3 == "" || str4 == "" )
-                alert("No ha ingresado las 4 cadenas correspondientes!");
+                console.log("No ha ingresado las 4 cadenas correspondientes!");
             else{
                 let primeras_comparacion =
                 
@@ -76,7 +76,7 @@
             const str4 = document.getElementById("str4").value;
 
             if(str1 == "" || str2 == "" || str3 == "" || str4 == "" )
-                alert("No ha ingresado las 4 cadenas correspondientes!");
+                console.log("No ha ingresado las 4 cadenas correspondientes!");
             else{
                 let prefijo_comun_mas_largo =
                 
@@ -100,6 +100,13 @@
             $("#paso3").addClass("animate__animated animate__wobble animate__delay-2s ");        
             $("#paso4").addClass("animate__animated animate__wobble animate__delay-5s");
         
+        }
+
+        function animar_codigo()
+        {
+            for(let i = 1; i <= 12; i++)
+                $("#codigo-uno-"+i).addClass("texto-amarillo");
+
         }
     
     </script>
@@ -202,7 +209,8 @@
             document.getElementById("palabra2").innerHTML = ans2;
         }
         else
-            document.write("There is no common prefix");
+            // alert("No exite ");
+            alert("No existe un prefijo común más largo en las 4 cadenas introducidas.");
         }
     </script>
 
@@ -228,7 +236,7 @@
         if (ans.length != 0)        //Si es mayor a 0, quiere decir que si existe un prefijo comun mas largo
             document.getElementById("palabraFinal").innerHTML = ans;
         else
-            document.write("There is no common prefix");
+            alert("No existe un prefijo común más largo en las 4 cadenas introducidas.");
         }
 
     </script>
@@ -254,6 +262,10 @@
 
         <main class="fondo-main">
             <div class="text">
+                <p class="explicacion-problema">EXPLICACIÓN DEL PROBLEMA <br> Un prefijo se define como un elemento gramatical que se adhiere a un término para cambiar su significado,
+                    es decir que, se anteponen a la palabra que se desea modificar.<br> Entonces, dado un conjunto de cadenas (4)
+                    se encontrará la cadena de prefijo común más larga, que es el prefijo de todas las cadenas dadas.
+                </p>
                 <h1>Instrucciones</h1>
                 <p class="texto-instrucciones"> Inserte las 4 cadenas a comparar y presione el botón comenzar.</p>
                 <p class="texto-instrucciones"> NOTA: Las palabras tienen que estar en minusculas.</p>
@@ -272,7 +284,7 @@
 
             <div class="centrar-flex">
                 <button class="boton" name="comenzar" type="button" onclick="obtener_Colocar4();compara_prefijos();regresa_prefijoFinal();
-                                                                            animar_explicacion(); palabras(); main();
+                                                                            animar_explicacion();palabras(); main();
                 "> Comenzar </button>
             </div>
 
