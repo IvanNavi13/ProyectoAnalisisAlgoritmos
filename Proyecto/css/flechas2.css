@@ -1,0 +1,46 @@
+#flechas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flecha1{
+    color: var(--rojo);
+    width: 16px;
+    height: 16px;
+    margin-top: 11px;
+    border-top: solid 5px;
+    border-right: solid 5px;
+    animation-name: flecha;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    display: none;
+    
+}
+
+.flecha1.derecha{
+   transform: rotate(315deg);
+}
+
+
+.flecha2{
+    color: var(--rojo);
+    width: 16px;
+    height: 16px;
+    margin-top: 11px;
+    border-top: solid 5px;
+    border-right: solid 5px;
+    animation-name: flecha;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+   /* display: none;*/
+}
+
+.flecha2.derecha{
+   transform: rotate(315deg);
+}
+
+@keyframes flecha{
+    0% {opacity: 0; left: 0px; top: 100px}
+    100%{opacity: 100; top:0px}
+}
