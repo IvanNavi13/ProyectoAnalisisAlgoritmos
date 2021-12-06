@@ -1,0 +1,171 @@
+<!--
+//*****************************************************************
+//	Equipo: Numero 3: Los printF
+//Cortés Coria Luis David 
+//Cortés Lugo Arturo 
+//Figueroa de la Torre Heidi Fernanda 
+//Garcia Garcia Cano Ivan
+
+//Curso: Análisis de algoritmos
+//(C) Agosto-Enero 2021
+//ESCOM-IPN
+
+//Algoritmo de prefijo comun mas largo para solucion Divide and Conquer
+//*****************************************************************
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DyC</title>
+    <!--Hojas de estilo-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="css/divideYconquer.css" rel="stylesheet">
+    <link rel="preload" href="css/divideYconquer.css" as="style"> <!--Hacer el sitio web mas rapido-->
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="js/scriptDyC.js" ></script> 
+    
+ 
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container logo-nav-container">
+            <h1 class="animate__animated animate__pulse animate__infinite	infinite">Divide and Conquer</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="./index.html"> Regresar al menú</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="contenedor">
+
+        <main class="fondo-main">
+            <div class="text">
+                <p class="explicacion-problema">EXPLICACIÓN DEL PROBLEMA <br> Un prefijo se define como un elemento gramatical que se adhiere a un término para cambiar su significado,
+                    es decir que, se anteponen a la palabra que se desea modificar.<br> Entonces, dado un conjunto de cadenas (4)
+                    se encontrará la cadena de prefijo común más larga, que es el prefijo de todas las cadenas dadas.
+                </p>
+                <h1>Instrucciones</h1>
+                <p class="texto-instrucciones"> Inserte las 4 cadenas a comparar y presione el botón comenzar.</p>
+                <p class="texto-instrucciones"> NOTA: Las palabras tienen que estar en minusculas.</p>
+            </div>
+
+            <br><br>
+
+            <div class="strings">
+                <input class="entrada-texto" type="text" name="str1" id="str1" onkeypress="return SoloMinusculas(event);" required>
+                <input class="entrada-texto" type="text" name="str2" id="str2" onkeypress="return SoloMinusculas(event);" required>
+                <input class="entrada-texto" type="text" name="str3" id="str3" onkeypress="return SoloMinusculas(event);" required>
+                <input class="entrada-texto" type="text" name="str4" id="str4" onkeypress="return SoloMinusculas(event);" required>
+            </div>
+
+            <br><br>
+
+            <div class="centrar-flex">
+                <button class="boton" name="comenzar" type="button" onclick="obtener_Colocar4();compara_prefijos();regresa_prefijoFinal();
+                                                                            animar_explicacion();palabras(); main();
+                "> Comenzar </button>
+            </div>
+
+            <div id="primer-parte">
+                <!-- Se colocan las 4 cadenas -->
+            </div>
+            
+            <div id="compara_primer_prefijo">
+                <!-- Se colocan el prefijo de ambos lados -->
+            </div>
+            
+            <div id="retorna_prefijoComunMasLargo">
+                <!-- Se coloca el prefijo comun mas largo de las 4 cadenas-->
+            </div>
+            
+        </main>
+
+        
+        <div class="titulo-explicacion">
+            <p>Explicación del Algoritmo</p>
+        </div>
+
+        <div class="contenedor-explicacion">
+
+            <div>
+                <h2 class="centrar" id="paso1">PASO 1</h2>
+                <p class="contenedor-pasos">Primero se divide el arreglo de cadenas en dos partes.</p>
+            </div>
+
+            <div>
+                <h2 class="centrar" id="paso2">PASO 2</h2>
+                <p class="contenedor-pasos">Posteriormente, se hace lo mismo tanto para la parte izquierda como para la parte derecha, 
+                    repitiendo hasta que todas las cadenas tengan una longitud de 1.</p>
+            </div>
+
+            <div>
+                <h2 class="centrar" id="paso3">PASO 3</h2>
+                <p class="contenedor-pasos">De igual manera, se volverá a analizar caracter por caracter de inicio a fin 
+                    para poder obtener el prefijo de las cadenas.</p>
+            </div>
+
+            <div>
+                <h2 class="centrar" id="paso4">PASO 4</h2>
+                <p class="contenedor-pasos">Finalmente, el proceso de conquistar se da 
+                    cuando se regresa el prefijo común de las cadenas de la parte izquierda y derecha.</p>
+            </div>
+
+        </div><!--.contenedor-explicacion-->
+
+
+        <div class="contenedor-codigos">
+
+            <div>
+                <b><h1 class="titulo-codigo">prefijoComunDos</h1></b>
+                <div class="codigo-uno">
+                    <p id="codigo-uno-1">function prefijoComunDos(str1,str2)</p>
+                    <p id="codigo-uno-2">{</p>
+                    <p id="codigo-uno-3"> &nbsp;&nbsp; let result = "";</p>
+                    <p id="codigo-uno-4"> &nbsp;&nbsp; let n1 = str1.length, n2 = str2.length;</p>
+                    <p id="codigo-uno-5"> &nbsp;&nbsp; for (let i = 0, j = 0; i <= (n1 - 1) && j <=(n2 - 1); i++, j++) { </p>
+                    <p id="codigo-uno-6"> &nbsp;&nbsp;&nbsp;&nbsp; if (str1[i] != str2[j]) </p>
+                    <p id="codigo-uno-7"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+                    <p id="codigo-uno-8"> &nbsp;&nbsp;&nbsp;&nbsp; result += str1[i];</p>
+                    <p id="codigo-uno-9"> &nbsp;&nbsp;&nbsp; }</p>
+                    <p id="codigo-uno-10">return (result);</p>
+                    <p id="codigo-uno-11">}</p>
+                </div>
+            </div>
+
+            <div>
+                <b><h1 class="titulo-codigo">prefijoComunMasLargo</h1></b>
+                <div class="codigo-dos">
+                    <p id="codigo-dos-1">function prefijoComunMasLargo(arr, low, high)</p>
+                    <p id="codigo-dos-2">{</p>
+                    <p id="codigo-dos-3"> &nbsp;&nbsp; if (low == high)</p>
+                    <p id="codigo-dos-4"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (arr[low]);</p>
+                    <p id="codigo-dos-5"> &nbsp;&nbsp; if (high > low)</p>
+                    <p id="codigo-dos-6"> &nbsp;&nbsp; {</p>
+                    <p id="codigo-dos-7"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let mid = low + Math.floor((high - low) / 2);</p>
+                    <p id="codigo-dos-8"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let str1 = prefijoComunMasLargo(arr, low, mid); </p>
+                    <p id="codigo-dos-9"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let str2 = prefijoComunMasLargo(arr, mid + 1, high); </p>
+                    <p id="codigo-dos-10"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (prefijoComunDos(str1, str2)); </p>
+                    <p id="codigo-dos-11"> &nbsp;&nbsp; } </p>
+                    <p id="codigo-dos-12">&nbsp;&nbsp; return null; </p>
+                    <p id="codigo-dos-13">} </p>
+                </div>
+            </div>
+
+        </div> <!--.contenedor-codigos-->
+
+    </div> <!--.contenedor-->
+
+</body>
+</html>
