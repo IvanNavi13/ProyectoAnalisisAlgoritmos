@@ -1,0 +1,57 @@
+.flecha{
+    color: var(--rojo);
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 18px;
+    border-top: solid 6px;
+    border-right: solid 6px;
+    position: absolute;
+    /* left: 0;  */ 
+    /* transition: all 0.4s; */
+}
+
+.flecha.derecha{
+    transform: rotate(315deg);
+}
+
+.flecha.moviendo1{
+    animation-duration: 3s;
+    animation-name: moviendo1;
+    animation-timing-function: linear; 
+  }
+
+  
+  @keyframes moviendo1 {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 310px;
+    }
+  }
+
+
+.flecha.moviendo2{
+    animation-duration: 3s;
+    animation-name: moviendo2;
+    animation-timing-function: linear; 
+  }
+  
+  @keyframes moviendo2 {
+    from {
+      left: 235;
+    }
+    to {
+      left: 550px;
+    }
+  } 
+
+
+  /*
+    left 0   to 310   --> flecha1
+    left 235 to 550   --> flecha2
+    left 570 to 850   --> flecha3
+    left 880 to 1170  --> flecha4
+  
+  */

@@ -328,9 +328,10 @@ a{
         color: var(--quinto);
         border-radius: 2.5rem; /*Para tener las esquinas redondeadas*/
     }
-
+}
 
 .separarCentrar-flex{
     display: flex;
     justify-content: space-around;
 }
+

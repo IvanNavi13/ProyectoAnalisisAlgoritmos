@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="css/divideYconquer.css" rel="stylesheet">
     <link rel="preload" href="css/divideYconquer.css" as="style"> <!--Hacer el sitio web mas rapido-->
+    <link href="css/flecha3.css" rel="stylesheet">
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <script src="js/scriptDyC.js" ></script> 
@@ -64,10 +65,10 @@
             <br><br>
 
             <div class="strings">
-                <input class="entrada-texto" type="text" name="str1" id="str1" onkeypress="return SoloMinusculas(event);" required>
-                <input class="entrada-texto" type="text" name="str2" id="str2" onkeypress="return SoloMinusculas(event);" required>
-                <input class="entrada-texto" type="text" name="str3" id="str3" onkeypress="return SoloMinusculas(event);" required>
-                <input class="entrada-texto" type="text" name="str4" id="str4" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geeksforgeeks" class="entrada-texto" type="text" name="str1" id="str1" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geeks" class="entrada-texto" type="text" name="str2" id="str2" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geek" class="entrada-texto" type="text" name="str3" id="str3" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geezer" class="entrada-texto" type="text" name="str4" id="str4" onkeypress="return SoloMinusculas(event);" required>
             </div>
 
             <br><br>
@@ -80,6 +81,12 @@
 
             <div id="primer-parte">
                 <!-- Se colocan las 4 cadenas -->
+                
+            </div>
+
+            <div id="flechas">
+                <span id="flechaI" class="flecha1 derecha"></span>
+                <span id="flechaD" class="flecha2 derecha"></span>
             </div>
             
             <div id="compara_primer_prefijo">

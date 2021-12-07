@@ -17,6 +17,14 @@
 //DEFINICIÓN DE FUNCIONES 
 //************************************************************************
 
+function mover() {
+    // document.getElementById('flecha1').classList.add('moviendo');
+    // document.getElementById('flecha2').classList.add('moviendo');
+    // document.getElementById('flecha2').classList.add('moviendo2');
+    $("#flecha1").addClass("moviendo1");
+    $("#flecha2").addClass("moviendo2");
+  }
+
 function obtener_Colocar4() 
 {
     $("#primer-parte").empty();
@@ -30,13 +38,30 @@ function obtener_Colocar4()
     else{
         let primeras_cuatro_Cadenas =
         "<div class=\"separar-flex animate__animated animate__backInLeft\" style=\"margin: 50px;\">" + 
-            "<p id='p1' class=\"palabra-cuadro\">"+ str1 +"</p>" +
-            "<p id='p2' class=\"palabra-cuadro\">"+ str2 +"</p>" + 
-            "<p id='p3' class=\"palabra-cuadro\">"+ str3 +"</p>" +
-            "<p id='p4' class=\"palabra-cuadro\">"+ str4 +"</p>" +
+            "<div>"  +
+                "<p id='p1' class=\"palabra-cuadro\">"+ str1 +"</p>" +
+                "<span id=\"flecha1\" class=\"flecha derecha\"></span>"+  
+            "</div>" + 
+            
+            "<div>"  +
+                "<p id='p2' class=\"palabra-cuadro\">"+ str2 +"</p>" + 
+                "<span id=\"flecha2\" class=\"flecha derecha \"></span>"+  
+            "</div>" + 
+            
+            "<div>"  +
+                "<p id='p3' class=\"palabra-cuadro\">"+ str3 +"</p>" +
+                "<span id=\"flecha3\" class=\"flecha derecha \"></span>"+  
+            "</div>" +
+            
+            "<div>"  +
+                "<p id='p4' class=\"palabra-cuadro\">"+ str4 +"</p>" +
+                "<span id=\"flecha4\" class=\"flecha derecha \"></span>"+  
+            "</div>" +
         "</div>";
 
         $("#primer-parte").append(primeras_cuatro_Cadenas);
+        
+        mover();
         
     }
     
@@ -58,8 +83,17 @@ function compara_prefijos()
         let primeras_comparacion =
         
         "<div class=\"separar-flex animate__animated animate__fadeInBottomRight animate__delay-3s\" style=\"margin: 50px;\">" +
-            "<p id = 'palabra1' class=\"palabra-cuadro\"></p>" +
-            "<p id = 'palabra2' class=\"palabra-cuadro\"></p>" + 
+
+            "<div>"  +
+                "<p id = 'palabra1' class=\"palabra-cuadro\"></p>" +
+                "<span id=\"flecha5\" class=\"flecha derecha\"></span>"+ 
+            "</div>" +   
+            
+            "<div>"  +
+                "<p id = 'palabra2' class=\"palabra-cuadro\"></p>" + 
+                "<span id=\"flecha6\" class=\"flecha derecha\"></span>"+ 
+            "</div>"  +
+
         "</div>";
     
         $("#compara_primer_prefijo").append(primeras_comparacion);
