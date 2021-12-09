@@ -68,7 +68,7 @@ function sustituir2() {
     document.getElementById("palabra2").innerHTML = str4;
     prefijo();    
     mover(document.getElementById('palabra1').clientWidth);
-    moverFlecha(prefijo());      
+    moverFlecha(prefijo().length);      
 }
 
 
@@ -78,7 +78,7 @@ function sustituir() {
     document.getElementById("palabra2").innerHTML = str3;
     prefijo();   
     mover(document.getElementById('palabra1').clientWidth);
-    moverFlecha(prefijo());       
+    moverFlecha(prefijo().length);       
 }
 
 
@@ -129,6 +129,34 @@ function obtener()
     document.getElementById("palabra1").innerHTML = str1;
     document.getElementById("palabra2").innerHTML = str2;
     prefijo();
+}
+
+function codigo()
+{
+    const str1 = document.getElementById("str1").value;
+    const str2 = document.getElementById("str2").value;
+    const str3 = document.getElementById("str3").value;
+    const str4 = document.getElementById("str4").value;
+    document.getElementById("array1").innerHTML = "array[0]= " + str1;
+    document.getElementById("array2").innerHTML = "array[1]= " + str2;
+    document.getElementById("array3").innerHTML = "array[2]= " + str3;
+    document.getElementById("array4").innerHTML = "array[3]= " + str4;
+}
+
+function codigo2(){
+    document.getElementById("arr").style.display = "none";
+    document.getElementById("linea1").innerHTML = "let prefix = array[0]";
+    document.getElementById("linea2").innerHTML = "for(let i = 1; i<=n-1; i++)";
+    document.getElementById("linea3").innerHTML = "prefix = prefijoComunDos(prefix, array[i])";
+}
+
+function codigo3()
+{
+    document.getElementById("linea1").innerHTML = "for(let i = 0, j = 0; i>=(n1-1)&& j<=(n2-1); i++, j++)";
+    document.getElementById("linea2").innerHTML = "if(str1[i] != str2[j]) break;";
+    document.getElementById("linea3").innerHTML = "result +=str1[i]";
+    document.getElementById("linea1").style.color = "#6e6452";
+    document.getElementById("linea3").style.color = "#B60020";
 }
 
 
@@ -186,13 +214,15 @@ function prefijo()
     //Si es mayor a 0, quiere decir que si existe un prefijo comun mas largo
     if (ans.length > 0) {     
         document.getElementById("palabra5").innerHTML = ans;
+        return ans;
     }
     else {
         alert("No hay prefijo común");
         return -1;
     }
-    return ans.length;
+    
 }
+
     //********************************************************************************************************
 //----------------------------------------------------FUNCION DEL ALGORITMO----------------------------------------------------    
 

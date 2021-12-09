@@ -25,6 +25,25 @@ function mover() {
     $("#flecha2").addClass("moviendo2");
   }
 
+
+  function moverFlecha(x) {
+    var p = (document.getElementById("p1").clientWidth - 8) + "px";
+    //  alert("= "+p);
+    var item = document.getElementById("flecha1");
+
+    document.getElementById("flecha1").animate([
+        // keyframes
+        { transform: 'translateX(18px)' },
+        { transform: 'translateX(' + p + ')' },
+        { transform: 'delay:1s' }
+    ], {
+        // timing options
+        duration: 2000,
+        iterations: 1
+    });
+    //var longitud = document.getElementById("palabra2").style.marginLeft;
+}
+
 function obtener_Colocar4() 
 {
     $("#primer-parte").empty();
@@ -40,28 +59,26 @@ function obtener_Colocar4()
         "<div class=\"separar-flex animate__animated animate__backInLeft\" style=\"margin: 50px;\">" + 
             "<div>"  +
                 "<p id='p1' class=\"palabra-cuadro\">"+ str1 +"</p>" +
-                "<span id=\"flecha1\" class=\"flecha derecha\"></span>"+  
+                "<span id=\"flecha1\" class=\"flecha derecha moviendo1\"></span>"+  
             "</div>" + 
             
             "<div>"  +
                 "<p id='p2' class=\"palabra-cuadro\">"+ str2 +"</p>" + 
-                "<span id=\"flecha2\" class=\"flecha derecha \"></span>"+  
+                "<span id=\"flecha2\" class=\"flecha derecha moviendo1\"></span>"+  
             "</div>" + 
             
             "<div>"  +
                 "<p id='p3' class=\"palabra-cuadro\">"+ str3 +"</p>" +
-                "<span id=\"flecha3\" class=\"flecha derecha \"></span>"+  
+                "<span id=\"flecha3\" class=\"flecha derecha moviendo1\"></span>"+  
             "</div>" +
             
             "<div>"  +
                 "<p id='p4' class=\"palabra-cuadro\">"+ str4 +"</p>" +
-                "<span id=\"flecha4\" class=\"flecha derecha \"></span>"+  
+                "<span id=\"flecha4\" class=\"flecha derecha moviendo1 \"></span>"+  
             "</div>" +
         "</div>";
 
-        $("#primer-parte").append(primeras_cuatro_Cadenas);
-        
-        mover();
+        $("#primer-parte").append(primeras_cuatro_Cadenas);  
         
     }
     
@@ -97,6 +114,8 @@ function compara_prefijos()
         "</div>";
     
         $("#compara_primer_prefijo").append(primeras_comparacion);
+
+        //mover();
     }
     
 }
@@ -264,5 +283,7 @@ function main(){
     else
         alert("No existe un prefijo común más largo en las 4 cadenas introducidas.");
 }
+
+
 
 

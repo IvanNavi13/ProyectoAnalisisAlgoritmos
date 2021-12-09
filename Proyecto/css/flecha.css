@@ -14,6 +14,7 @@
     --amarillo3: #FFC61A;
     --rojo: #B60020;
     --rojo2: #F35A75;
+    --flecha: #6e6452;
 }
 
 .palabras{
@@ -21,6 +22,41 @@
     flex-direction: row;
     margin-left: 50%;
     margin-right: 50%;
+}
+
+.lineas{
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 800px;
+}
+.arrays{
+    display: flex;
+    flex-direction: row;
+}
+
+#array1{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 50px;
+}
+
+#array2{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#array3{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#array4{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
 }
 
 .palabra-prefijo{
@@ -46,10 +82,10 @@
 }
 
 #palabra5{
-    margin-top: 3%;
+    margin-top: 10px;
     margin-left: 50%;
     margin-right: 50%;
-    margin-bottom: 4%;
+    margin-bottom: 10px;
 }
 
 #final{
@@ -64,7 +100,7 @@
 }
 
 .flecha1{
-    color: var(--rojo);
+    color: var(--flecha);
     width: 16px;
     height: 16px;
     margin-top: 11px;
@@ -83,7 +119,7 @@
 
 
 .flecha2{
-    color: var(--rojo);
+    color: var(--flecha);
     width: 16px;
     height: 16px;
     margin-top: 11px;

@@ -1,46 +1,43 @@
-#flechas{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.span1{
+    color: #FFFFFF;
 }
 
-.flecha1{
-    color: var(--rojo);
-    width: 16px;
-    height: 16px;
-    margin-top: 11px;
-    border-top: solid 5px;
-    border-right: solid 5px;
-    animation-name: flecha;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    display: none;
-    
+@keyframes parpadeo{
+	from, to{border-color:transparent}
+	50%{border-color:#FFFFFF}
+}
+@keyframes escribiendo{
+	from{width:100%}
+	to{width:0}
+}
+@-webkit-keyframes parpadeo{
+	from, to{border-color:transparent}
+	50%{border-color:#FFFFFF}
+}
+@-webkit-keyframes escribiendo{
+	from{width:100%}
+	to{width:0}
+}
+@-moz-keyframes parpadeo {
+	from, to{border-color:transparent}
+	50%{border-color:#FFFFFF}
+}	
+@-moz-keyframes escribiendo {
+	from{width:100%}
+	to{width:0}
 }
 
-.flecha1.derecha{
-   transform: rotate(315deg);
-}
-
-
-.flecha2{
-    color: var(--rojo);
-    width: 16px;
-    height: 16px;
-    margin-top: 11px;
-    border-top: solid 5px;
-    border-right: solid 5px;
-    animation-name: flecha;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-   /* display: none;*/
-}
-
-.flecha2.derecha{
-   transform: rotate(315deg);
-}
-
-@keyframes flecha{
-    0% {opacity: 0; left: 0px; top: 100px}
-    100%{opacity: 100; top:0px}
+.span1 span{
+    position:absolute;
+	top:0;
+	right:0;
+	width:0;
+	background-color:#000000;
+	border-left: .1em solid #FFFFFF;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	animation: escribiendo 5s steps(36, end), parpadeo 1s step-end infinite;
+	-webkit-animation: escribiendo 5s steps(36, end), parpadeo 1s step-end infinite;
+	-moz-animation: escribiendo 5s steps(36, end), parpadeo 1s step-end infinite;
 }
