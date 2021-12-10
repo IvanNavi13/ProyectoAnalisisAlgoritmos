@@ -203,7 +203,7 @@ a{
 }
 
 .contenedor-pasos{
-    max-height: 100px;
+    max-height: auto;
     max-width: 450px;
     margin: 22px;
     color: var(--blanco);
@@ -295,8 +295,8 @@ a{
 }
 
 .palabra-cuadro{
-    width:130px;
-    height:30px;
+    max-width:auto;
+    height:auto;
     padding:8px;
     margin: 5px;
     font-weight:bold;
@@ -328,10 +328,102 @@ a{
         color: var(--quinto);
         border-radius: 2.5rem; /*Para tener las esquinas redondeadas*/
     }
+    
 }
 
 .separarCentrar-flex{
     display: flex;
     justify-content: space-around;
+}
+
+.cuadro-arreglo{
+    max-width:auto;
+    height:auto;
+    padding:8px;
+    margin: 5px;
+    font-weight:bold;
+    text-align: center;
+    font-size: 12px;    
+    background-color: var(--secundario);
+    color: var(--quinto);
+    border-radius: 1.5rem; /*Para tener las esquinas redondeadas*/
+}
+
+@media (min-width: 480px) { /* /480px cambia cuando es telefono/ */
+    .cuadro-arreglo{
+        width:auto;
+        height:auto;
+        padding:18px;
+        margin: 5px;
+        font-weight:bold;
+        text-align: center;
+        font-size: 22px;    
+        background-color: var(--secundario);
+        color: var(--quinto);
+        border-radius: 2.5rem; /*Para tener las esquinas redondeadas*/
+    }
+    
+}
+
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounceInDown { /*El arreglo*/
+    --animate-delay: 1s;
+    --animate-duration: 2s;
+} 
+  
+.animate__animated.animate__fadeInLeftBig { /*Primeras 2 Izquierda*/
+      --animate-delay: 3.3s;
+      --animate-duration: 3.5s; 
+}
+ 
+.animate__animated.animate__fadeInRightBig { /*Primeras 2 Derecha*/
+    --animate-delay: 1.8s;
+    --animate-duration: 2.5s; 
+}
+
+.animate__animated.animate__fadeInBottomRight { /*Primeras 1 prefijo izquierda*/
+    --animate-duration: 1.8s; 
+   
+  }
+
+.animate__animated.animate__fadeInBottomLeft { /*Primeras 1 prefijo derecha*/
+    --animate-delay: 1.5s;
+    --animate-duration: 1.5s; 
+   
+}
+
+.animate__animated.animate__backInUp {      /*Prefijo Final*/
+    --animate-delay: 1.5s;
+    --animate-duration: 1.5s; 
+   
+}
+
+.animate__animated.animate__pulse {      /*Prefijo Final*/
+    --animate-delay: 2s;
+    --animate-duration: 1.5s; 
+   
+}
+.animate__animated.animate__shakeY {      /*Titulo*/
+    --animate-delay: 2s;
+    --animate-duration: 3s; 
+   
+}
+
+.flex-uno{
+    display: flex;
+    justify-content: space-evenly;
+}
+.flex-centro{
+    display: flex;
+    justify-content: center;
+}
+.flex-final{
+    display: flex;
+    justify-content: end;
+}
+.flex-inicio{
+    display: flex;
+    justify-content: start;
 }
 

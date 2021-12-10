@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="css/divideYconquer.css" rel="stylesheet">
     <link rel="preload" href="css/divideYconquer.css" as="style"> <!--Hacer el sitio web mas rapido-->
-    <link href="css/flecha3.css" rel="stylesheet">
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <script src="js/scriptDyC.js" ></script> 
@@ -39,7 +38,7 @@
 
     <header class="header">
         <div class="container logo-nav-container">
-            <h1 class="animate__animated animate__pulse animate__infinite	infinite">Divide and Conquer</h1>
+            <h1 class="animate__animated animate__shakeY animate__infinite	infinite">Divide and Conquer</h1>
             <nav class="navigation">
                 <ul>
                     <li><a href="./index.html"> Regresar al menú</a></li>
@@ -74,23 +73,28 @@
             <br><br>
 
             <div class="centrar-flex">
-                <button class="boton" name="comenzar" type="button" onclick="obtener_Colocar4();compara_prefijos();regresa_prefijoFinal();
+                <button class="boton" name="comenzar" type="button" onclick="colocarArreglo(); obtener_Colocar4();compara_prefijos();regresa_prefijoFinal();
                                                                             animar_explicacion();palabras(); main();
                 "> Comenzar </button>
             </div>
 
-            <div id="primer-parte">
-                <!-- Se colocan las 4 cadenas -->
+            <div id="arreglo-Strings">
+                <!-- Se coloca el arreglo de Cadenas -->
                 
             </div>
+            
+            <div id="primer-parte">
+                <!-- Se colocan las 4 cadenas -->
 
-            <div id="flechas">
+            </div>
+
+            <!-- <div id="flechas">
                 <span id="flechaI" class="flecha1 derecha"></span>
                 <span id="flechaD" class="flecha2 derecha"></span>
-            </div>
+            </div> -->
             
             <div id="compara_primer_prefijo">
-                <!-- Se colocan el prefijo de ambos lados -->
+                <!-- Se colocan el prefijo de ambos lados -->  
             </div>
             
             <div id="retorna_prefijoComunMasLargo">
@@ -114,8 +118,10 @@
             <div>
                 <h2 class="centrar" id="paso2">PASO 2</h2>
                 <p class="contenedor-pasos">Posteriormente, se hace lo mismo tanto para la parte izquierda como para la parte derecha, 
-                    repitiendo hasta que todas las cadenas tengan una longitud de 1.</p>
+                    repitiendo hasta que todas las cadenas tengan una longitud de 1. Es decir, se sigue dividiendo los problemas en 
+                    dos subproblemas hasta que no se puedan dividir más.</p>
             </div>
+             
 
             <div>
                 <h2 class="centrar" id="paso3">PASO 3</h2>
@@ -136,24 +142,24 @@
 
             <div>
                 <b><h1 class="titulo-codigo">prefijoComunDos</h1></b>
-                <div class="codigo-uno">
+                <div class="codigo-uno animate__animated animate__pulse animate__infinite	infinite " >
                     <p id="codigo-uno-1">function prefijoComunDos(str1,str2)</p>
-                    <p id="codigo-uno-2">{</p>
-                    <p id="codigo-uno-3"> &nbsp;&nbsp; let result = "";</p>
-                    <p id="codigo-uno-4"> &nbsp;&nbsp; let n1 = str1.length, n2 = str2.length;</p>
-                    <p id="codigo-uno-5"> &nbsp;&nbsp; for (let i = 0, j = 0; i <= (n1 - 1) && j <=(n2 - 1); i++, j++) { </p>
-                    <p id="codigo-uno-6"> &nbsp;&nbsp;&nbsp;&nbsp; if (str1[i] != str2[j]) </p>
-                    <p id="codigo-uno-7"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
-                    <p id="codigo-uno-8"> &nbsp;&nbsp;&nbsp;&nbsp; result += str1[i];</p>
-                    <p id="codigo-uno-9"> &nbsp;&nbsp;&nbsp; }</p>
-                    <p id="codigo-uno-10">return (result);</p>
-                    <p id="codigo-uno-11">}</p>
+                    <p id="codigo-uno-2" >{</p>
+                    <p id="codigo-uno-3" > &nbsp;&nbsp; let result = "";</p>
+                    <p id="codigo-uno-4" > &nbsp;&nbsp; let n1 = str1.length, n2 = str2.length;</p>
+                    <p id="codigo-uno-5" > &nbsp;&nbsp; for (let i = 0, j = 0; i <= (n1 - 1) && j <=(n2 - 1); i++, j++) { </p>
+                    <p id="codigo-uno-6" > &nbsp;&nbsp;&nbsp;&nbsp; if (str1[i] != str2[j]) </p>
+                    <p id="codigo-uno-7" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p>
+                    <p id="codigo-uno-8" > &nbsp;&nbsp;&nbsp;&nbsp; result += str1[i];</p>
+                    <p id="codigo-uno-9" > &nbsp;&nbsp;&nbsp; }</p>
+                    <p id="codigo-uno-10" >return (result);</p>
+                    <p id="codigo-uno-11" >}</p>
                 </div>
             </div>
 
             <div>
                 <b><h1 class="titulo-codigo">prefijoComunMasLargo</h1></b>
-                <div class="codigo-dos">
+                <div class="codigo-dos animate__animated animate__pulse animate__infinite	infinite">
                     <p id="codigo-dos-1">function prefijoComunMasLargo(arr, low, high)</p>
                     <p id="codigo-dos-2">{</p>
                     <p id="codigo-dos-3"> &nbsp;&nbsp; if (low == high)</p>
@@ -176,3 +182,18 @@
 
 </body>
 </html>
+
+<!--
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-down-left" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#B60020" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <line x1="17" y1="7" x2="7" y2="17" />
+                    <polyline points="16 17 7 17 7 8" />
+                  </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-down-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#B60020" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <line x1="7" y1="7" x2="17" y2="17" />
+        <polyline points="17 8 17 17 8 17" />
+    </svg>
+
+-->

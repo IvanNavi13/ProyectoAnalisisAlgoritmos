@@ -100,7 +100,7 @@
 }
 
 .flecha1{
-    color: var(--flecha);
+    color: var(--rojo);
     width: 16px;
     height: 16px;
     margin-top: 11px;
@@ -119,7 +119,7 @@
 
 
 .flecha2{
-    color: var(--flecha);
+    color: var(--rojo);
     width: 16px;
     height: 16px;
     margin-top: 11px;

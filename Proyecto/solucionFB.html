@@ -42,7 +42,7 @@
 
     <header class="header">
         <div class="container logo-nav-container">
-            <h1 class="animate__animated animate__pulse animate__infinite	infinite">Fuerza Bruta</h1>
+            <h1 class="animate__animated animate__shakeY animate__infinite	infinite">Fuerza Bruta</h1>
             <nav class="navigation">
                 <ul>
                     <li><a href="./index.html"> Regresar al menú</a></li>
@@ -68,10 +68,10 @@
             <br><br>
 
             <div class="strings">
-                <input class="entrada-texto" type="text" name="str1" id="str1" onkeypress="return SoloMinusculas(event);" required>
-                <input class="entrada-texto" type="text" name="str2" id="str2" onkeypress="return SoloMinusculas(event);" required>
-                <input class="entrada-texto" type="text" name="str3" id="str3" onkeypress="return SoloMinusculas(event);" required>
-                <input class="entrada-texto" type="text" name="str4" id="str4" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geeksforgeeks" class="entrada-texto" type="text" name="str1" id="str1" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geeks" class="entrada-texto" type="text" name="str2" id="str2" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geek" class="entrada-texto" type="text" name="str3" id="str3" onkeypress="return SoloMinusculas(event);" required>
+                <input value="geezer"class="entrada-texto" type="text" name="str4" id="str4" onkeypress="return SoloMinusculas(event);" required>
             </div>
 
             <br><br>
@@ -90,11 +90,13 @@
                 <h1 id="array4" style="color: #02457A;"></h1>
             </div>
 
-            <div class="lineas">
+            <div class="lineas ">
                 <h1 id= "linea1" style="color: #02457A;"></h1>
                 <h1 id= "linea2" style="color: #02457A;"></h1>
                 <h1 id= "linea3" style="color: #02457A;"></h1>
             </div>
+
+            <br><br><br>
 
             <div class="palabras centrar-flex">
                 <h1 id="palabra1" style="color: #02457A;"></h1>
@@ -107,7 +109,7 @@
             </div>
     
             <div class="palabra-prefijo centrar-flex">
-                <h1 id="palabra5" style="color: #B60020;"></h1>
+                <h1 id="palabra5" style="color: #8236CB;"></h1>
             </div>
 
             <div class="centrar-flex">
@@ -149,7 +151,7 @@
 
             <div>
                 <b><h1 class="titulo-codigo">prefijoComunDos</h1></b>
-                <div class="codigo-uno">
+                <div class="codigo-uno animate__animated animate__pulse animate__infinite	infinite">
                     <p id="codigo-uno-1">function prefijoComunDos(str1,str2)</p>
                     <p id="codigo-uno-2">{</p>
                     <p id="codigo-uno-3"> &nbsp;&nbsp; let result = "";</p>
@@ -167,7 +169,7 @@
 
             <div>
                 <b><h1 class="titulo-codigo">prefijoComunMasLargo</h1></b>
-                <div class="codigo-dos">
+                <div class="codigo-dos animate__animated animate__pulse animate__infinite	infinite">
                     <p id="codigo-dos-1">function prefijoComunMasLargo(arr,n)</p>
                     <p id="codigo-dos-2">{</p>
                     <p id="codigo-dos-3">&nbsp;&nbsp;&nbsp;&nbsp; let prefix = arr[0];</p>
@@ -187,7 +189,7 @@
                      que se da cuando todas las palabras que se encuentran en el String para obtener
                       su prefijo común más largo  es la misma palabra. De esta manera la cota es <span class="negritas">O(n1*n)</span>, 
                        en donde “n1” representa el número de caracteres que tiene la palabra y “n” representa
-                        el número de palabras contenidas en el String para sacar su prefijo común más largo  </p>
+                        el número de palabras contenidas en el String para sacar su prefijo común más largo.  </p>
             </div>
         </div>
 

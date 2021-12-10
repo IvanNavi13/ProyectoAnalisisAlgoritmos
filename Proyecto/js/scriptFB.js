@@ -19,9 +19,9 @@
 
 function animar_explicacion()
 {
-    $("#paso1").addClass("animate__animated animate__wobble animate__delay-1s");
-    $("#paso2").addClass("animate__animated animate__wobble animate__delay-3s ");
-    $("#paso3").addClass("animate__animated animate__wobble animate__delay-5s ");
+    $("#paso1").addClass("animate__animated animate__wobble animate__delay-1s animate__repeat-3 ");
+    $("#paso2").addClass("animate__animated animate__wobble animate__delay-3s animate__repeat-3 ");
+    $("#paso3").addClass("animate__animated animate__wobble animate__delay-5s animate__repeat-3 ");
 
 }
 
@@ -147,16 +147,16 @@ function codigo2(){
     document.getElementById("arr").style.display = "none";
     document.getElementById("linea1").innerHTML = "let prefix = array[0]";
     document.getElementById("linea2").innerHTML = "for(let i = 1; i<=n-1; i++)";
-    document.getElementById("linea3").innerHTML = "prefix = prefijoComunDos(prefix, array[i])";
+    document.getElementById("linea3").innerHTML = "&nbsp;&nbsp;&nbsp;prefix = prefijoComunDos(prefix, array[i])";
 }
 
 function codigo3()
 {
     document.getElementById("linea1").innerHTML = "for(let i = 0, j = 0; i>=(n1-1)&& j<=(n2-1); i++, j++)";
-    document.getElementById("linea2").innerHTML = "if(str1[i] != str2[j]) break;";
-    document.getElementById("linea3").innerHTML = "result +=str1[i]";
-    document.getElementById("linea1").style.color = "#6e6452";
-    document.getElementById("linea3").style.color = "#B60020";
+    document.getElementById("linea2").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;if(str1[i] != str2[j]) break;";
+    document.getElementById("linea3").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;result +=str1[i]";
+    document.getElementById("linea1").style.color = "#B60020"; 
+    document.getElementById("linea3").style.color = "#8236CB";
 }
 
 

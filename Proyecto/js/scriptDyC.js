@@ -17,32 +17,56 @@
 //DEFINICIÓN DE FUNCIONES 
 //************************************************************************
 
-function mover() {
-    // document.getElementById('flecha1').classList.add('moviendo');
-    // document.getElementById('flecha2').classList.add('moviendo');
-    // document.getElementById('flecha2').classList.add('moviendo2');
-    $("#flecha1").addClass("moviendo1");
-    $("#flecha2").addClass("moviendo2");
+  function colocarArreglo(){
+
+    $("#arreglo-Strings").empty();
+
+    const str1 = document.getElementById("str1").value;
+    const str2 = document.getElementById("str2").value;
+    const str3 = document.getElementById("str3").value;
+    const str4 = document.getElementById("str4").value;
+
+    if(str1 == "" || str2 == "" || str3 == "" || str4 == "" )
+        console.log("No ha ingresado las 4 cadenas correspondientes!");
+    else{
+        let stringCadenas =
+        
+        "<div class=\"separar-flex animate__animated animate__bounceInDown\" style=\"margin: 50px;\">" +
+
+            "<div>"  +
+                "<p id='arreglo' class=\"cuadro-arreglo\">" + "[ "+ str1 +", "+ str2 +", "+ str3 +", "+ str4 + " ]" + "</p>" +
+
+                "<div class=\"flex-uno\">"  +
+                    "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-left\"" +
+                        "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                        "stroke-linecap=\"round\" stroke-linejoin=\"round\">" +
+                    
+                            "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/>" +
+                            "<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />" +
+                            "<polyline points=\"16 17 7 17 7 8\" />" +
+                    "</svg>" +
+                    
+                    "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-right\" " +
+                        "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                        "stroke-linecap=\"round\" stroke-linejoin=\"round\"> " +
+                            
+                            "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/> " + 
+                            "<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" /> " +
+                            "<polyline points=\"17 8 17 17 8 17\" /> " +
+                    "</svg>" +
+                    
+                "</div>" +
+
+            "</div>" +
+ 
+        "</div>";
+    
+        $("#arreglo-Strings").append(stringCadenas);
+        
+    }
+
   }
 
-
-  function moverFlecha(x) {
-    var p = (document.getElementById("p1").clientWidth - 8) + "px";
-    //  alert("= "+p);
-    var item = document.getElementById("flecha1");
-
-    document.getElementById("flecha1").animate([
-        // keyframes
-        { transform: 'translateX(18px)' },
-        { transform: 'translateX(' + p + ')' },
-        { transform: 'delay:1s' }
-    ], {
-        // timing options
-        duration: 2000,
-        iterations: 1
-    });
-    //var longitud = document.getElementById("palabra2").style.marginLeft;
-}
 
 function obtener_Colocar4() 
 {
@@ -56,25 +80,71 @@ function obtener_Colocar4()
         alert("No ha ingresado las 4 cadenas correspondientes!");
     else{
         let primeras_cuatro_Cadenas =
-        "<div class=\"separar-flex animate__animated animate__backInLeft\" style=\"margin: 50px;\">" + 
-            "<div>"  +
-                "<p id='p1' class=\"palabra-cuadro\">"+ str1 +"</p>" +
-                "<span id=\"flecha1\" class=\"flecha derecha moviendo1\"></span>"+  
-            "</div>" + 
+        "<div class=\"separar-flex \" style=\"margin: 50px;\">" + //animate__animated animate__backInLeft
+
+            
+                "<div>"  +
+                    "<p id='p1' class=\"palabra-cuadro animate__animated animate__fadeInLeftBig\">"+ str1 +"</p>" +
+
+                    "<div class=\"flex-centro animate__animated animate__fadeInLeftBig\">"  +
+                        "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-right\" " +
+                            "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                            "stroke-linecap=\"round\" stroke-linejoin=\"round\"> " +
+                                
+                                "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/> " + 
+                                "<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" /> " +
+                                "<polyline points=\"17 8 17 17 8 17\" /> " +
+                        "</svg>" +
+                    "</div>" + 
+                    
+                "</div>" + 
+                
+                "<div>"  +
+                    "<p id='p2' class=\"palabra-cuadro animate__animated animate__fadeInLeftBig\">"+ str2 +"</p>" + 
+
+                    "<div class=\"flex-centro animate__animated animate__fadeInLeftBig\">"  +
+                        "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-left\"" +
+                        "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                        "stroke-linecap=\"round\" stroke-linejoin=\"round\">" +
+                    
+                            "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/>" +
+                            "<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />" +
+                            "<polyline points=\"16 17 7 17 7 8\" />" +
+                        "</svg>" +
+                    "</div>" + 
+
+                "</div>" +
             
             "<div>"  +
-                "<p id='p2' class=\"palabra-cuadro\">"+ str2 +"</p>" + 
-                "<span id=\"flecha2\" class=\"flecha derecha moviendo1\"></span>"+  
-            "</div>" + 
-            
-            "<div>"  +
-                "<p id='p3' class=\"palabra-cuadro\">"+ str3 +"</p>" +
-                "<span id=\"flecha3\" class=\"flecha derecha moviendo1\"></span>"+  
+                "<p id='p3' class=\"palabra-cuadro animate__animated animate__fadeInRightBig animate__delay-2s \">"+ str3 +"</p>" +
+
+                "<div class=\"flex-centro animate__animated animate__fadeInRightBig animate__delay-2s\">"  +
+                        "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-right\" " +
+                            "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                            "stroke-linecap=\"round\" stroke-linejoin=\"round\"> " +
+                                
+                                "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/> " + 
+                                "<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" /> " +
+                                "<polyline points=\"17 8 17 17 8 17\" /> " +
+                        "</svg>" +
+                "</div>" + 
+
             "</div>" +
             
             "<div>"  +
-                "<p id='p4' class=\"palabra-cuadro\">"+ str4 +"</p>" +
-                "<span id=\"flecha4\" class=\"flecha derecha moviendo1 \"></span>"+  
+                "<p id='p4' class=\"palabra-cuadro animate__animated animate__fadeInRightBig animate__delay-2s\">"+ str4 +"</p>" +
+                
+                "<div class=\"flex-centro animate__animated animate__fadeInRightBig animate__delay-2s\">"  +
+                        "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-left\"" +
+                        "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                        "stroke-linecap=\"round\" stroke-linejoin=\"round\">" +
+                    
+                            "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/>" +
+                            "<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />" +
+                            "<polyline points=\"16 17 7 17 7 8\" />" +
+                        "</svg>" +
+                "</div>" + 
+
             "</div>" +
         "</div>";
 
@@ -99,16 +169,38 @@ function compara_prefijos()
     else{
         let primeras_comparacion =
         
-        "<div class=\"separar-flex animate__animated animate__fadeInBottomRight animate__delay-3s\" style=\"margin: 50px;\">" +
+        "<div class=\"separar-flex\" style=\"margin: 50px;\">" +
 
             "<div>"  +
-                "<p id = 'palabra1' class=\"palabra-cuadro\"></p>" +
-                "<span id=\"flecha5\" class=\"flecha derecha\"></span>"+ 
+                "<p id = 'palabra1' class=\"palabra-cuadro animate__animated animate__fadeInBottomRight animate__delay-3s\"></p>" +
+
+                "<div class=\"flex-final animate__animated animate__fadeInBottomRight animate__delay-3s\">"  +
+                        "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-right\" " +
+                            "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                            "stroke-linecap=\"round\" stroke-linejoin=\"round\"> " +
+                                
+                                "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/> " + 
+                                "<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" /> " +
+                                "<polyline points=\"17 8 17 17 8 17\" /> " +
+                        "</svg>" +
+                "</div>" + 
+                
             "</div>" +   
             
             "<div>"  +
-                "<p id = 'palabra2' class=\"palabra-cuadro\"></p>" + 
-                "<span id=\"flecha6\" class=\"flecha derecha\"></span>"+ 
+                "<p id = 'palabra2' class=\"palabra-cuadro animate__animated animate__fadeInBottomLeft animate__delay-4s\"></p>" + 
+
+                "<div class=\"flex-inicio animate__animated animate__fadeInBottomLeft animate__delay-4s\">"  +
+                        "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-arrow-down-left\"" +
+                        "width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"#B60020\" fill=\"none\" " +
+                        "stroke-linecap=\"round\" stroke-linejoin=\"round\">" +
+                    
+                            "<path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"/>" +
+                            "<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />" +
+                            "<polyline points=\"16 17 7 17 7 8\" />" +
+                        "</svg>" +
+                "</div>" + 
+
             "</div>"  +
 
         "</div>";
@@ -147,10 +239,10 @@ function regresa_prefijoFinal()
 
 function animar_explicacion()
 {
-    $("#paso1").addClass("animate__animated animate__wobble animate__delay-1s");
-    $("#paso2").addClass("animate__animated animate__wobble animate__delay-2s ");
-    $("#paso3").addClass("animate__animated animate__wobble animate__delay-2s ");        
-    $("#paso4").addClass("animate__animated animate__wobble animate__delay-5s");
+    $("#paso1").addClass("animate__animated animate__wobble animate__delay-1s animate__repeat-3");
+    $("#paso2").addClass("animate__animated animate__wobble animate__delay-2s animate__repeat-3");
+    $("#paso3").addClass("animate__animated animate__wobble animate__delay-2s animate__repeat-3");        
+    $("#paso4").addClass("animate__animated animate__wobble animate__delay-5s animate__repeat-3");
 
 }
 

@@ -163,3 +163,12 @@ h1,h2,h3{
     margin-top: 0;
     
 }
+
+.imagen-prefijo{
+    max-width: 360px;
+    max-height: auto;
+    padding: auto;
+    margin-top: 3.3rem;
+    border-radius: .5rem;
+}
+
