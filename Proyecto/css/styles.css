@@ -102,10 +102,18 @@ h1,h2,h3{
 
 @media (min-width: 768px) {
     .tres-columnas{
-        display: flex;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 0px;
+        height: 630px;
+        justify-items: center;
+        /* display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 630px;
+        height: 630px; */
         /* align-items: center;   */
     }
 
@@ -135,8 +143,8 @@ h1,h2,h3{
 }
 
 .circulo{
-    max-width: 50rem;
-    height: 50rem;
+    max-width: 40rem;
+    height: 40rem;
     background-color: var(--quinto);
     border-radius: 100%;
 }

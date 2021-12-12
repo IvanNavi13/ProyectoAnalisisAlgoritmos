@@ -1,0 +1,150 @@
+<!--
+//*****************************************************************
+//	Equipo: Numero 3: Los printF
+//Cortés Coria Luis David 
+//Cortés Lugo Arturo 
+//Figueroa de la Torre Heidi Fernanda 
+//Garcia Garcia Cano Ivan
+
+//Curso: Análisis de algoritmos
+//(C) Agosto-Enero 2021
+//ESCOM-IPN
+
+//Explicacion del Algoritmo de prefijo comun mas largo para ambas soluciones
+//*****************************************************************
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicación del Problema</title>
+    <!--Hojas de estilo-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="css/explicacionProblema.css" rel="stylesheet">
+    <link rel="preload" href="css/explicacionProblema.css" as="style"> <!--Hacer el sitio web mas rapido-->
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="js/explicacionProblema.js" ></script>  
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container logo-nav-container">
+            <h1 class="animate__animated animate__shakeY animate__infinite	infinite">Explicación del Problema</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="./index.html"> Regresar al menú</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor">
+
+        <main class="fondo-main">
+
+            <div class="dividir-dos">
+
+                <div class="cuadro-titulo">
+                    <h2 class="animate__animated animate__flash animate__infinite	infinite ">¿Qué es un prefijo?</h2>
+                </div>
+                
+                <p>Un prefijo se define como un elemento gramatical que se adhiere a un término para cambiar su significado,
+                     es decir que, se anteponen a la palabra que se desea modificar.</p>
+            </div>
+            
+            
+
+            <div class="dividir-dos">
+                
+                <p>Por lo tanto, el presente problema consistirá en la implementación de un programa que identifique dicho prefijo,
+                    con apoyo de la solución directa y del mismo modo, con el paradigma algorítmico “Divide y Vencerás”. 
+                    Entonces, dado un conjunto de cadenas (4) se encontrará la cadena de prefijo común más larga,
+                    que es el prefijo de todas las cadenas dadas.
+                </p>
+                
+                <div class="cuadro-titulo">
+                    <h2 class="animate__animated animate__flash animate__infinite	infinite "> Problema </h2>
+                </div>
+
+            </div>
+            
+
+            <div class="flex-centro">
+                <img src="./images/fondo_azul.png" alt="prefijo" class="imagen-prefijo">
+            </div>
+
+            <br><br><br>
+            
+            <!-- <div >
+                <h2>Definición formal de la solución</h2>
+                <p></p>
+            </div> -->
+
+
+            <div class="titulo-centrar">
+                <div>
+                    <h2 class="animate__animated animate__flash animate__infinite	infinite ">Análisis de la Cota</h2>
+                </div>
+            </div>
+
+            <div>
+                <div class="separar-subtitulo-grid">
+                    
+                    <div class="cuadro-subtitulo">
+                        <h2 class="animate__animated animate__tada animate__infinite	infinite ">Fuerza Bruta</h2>
+
+                        <div>
+                            <p class="definicion-cota">El análisis de la cota se realizó teniendo en cuenta el peor caso del algoritmo,
+                                que se da cuando todas las palabras que se encuentran en el arreglo de String para obtener
+                                 su prefijo común más largo es la misma palabra. De esta manera la cota es <span class="negritas">Θ(n1*n)</span>, 
+                                  en donde “n1” representa el número de caracteres que tiene la palabra y “n” representa
+                                   el número de palabras contenidas en el String para sacar su prefijo común más largo. </p>
+                        </div>
+
+                        <div class="imagen-cota">
+                            <img src="./images/cotaFB.JPG" alt="cotaFB" >
+                        </div>
+
+                    </div>
+                    
+                    <div class="cuadro-subtitulo">
+                        <h2 class="animate__animated animate__tada animate__infinite	infinite ">Divide y Vencerás</h2>
+
+                        <div>
+                            <p class="definicion-cota">
+                                Para el analisis de la cota se analizo por separado; inciando por la funcion "prefijoComunDos" el cual
+                                se contempla el peor caso que se da cuando se tiene que recorrer todos los caracteres de las palabras que se encuentran en 
+                                el arreglo, dicha cota es de Θ(n1). Para la segunda funcion "prefijoComun", se realizara un análisis 
+                                para algoritmos recursivos, ya que en esta función la llamamos dentro de la misma función. Una vez, ya 
+                                analizado el algoritmo con las operaciones consideradas (Asignacion, aritmetica, comparacion y saltos).
+                                Ademas de haber simplificado, tendremos como resultado una funcion como la siguiente: T(n)=11+2T(n/2)+O(n1).
+                                Aplicando el teorema maestro, se tiene como resultado <span class="negritas">T(n) ε Θ(nlogn)</span>.
+                            </p>
+                        </div>
+
+                        <div class="imagen-cota">
+                            <img src="./images/cotaDyC.JPG" alt="cotaDyC">
+                        </div>
+
+                    </div>
+                    
+    
+                </div>
+            </div>
+
+            
+        </main>
+        
+
+    </div>
+
+
+    
+</body>
+</html>
