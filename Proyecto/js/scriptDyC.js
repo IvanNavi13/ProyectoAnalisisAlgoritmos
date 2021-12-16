@@ -17,7 +17,40 @@
 //DEFINICIÓN DE FUNCIONES 
 //************************************************************************
 
-  function colocarArreglo(){
+    function colocarCodigo1(){
+        document.getElementById("codigo1").innerHTML = "let mid = low + Math.floor((high - low) / 2);"
+        document.getElementById("codigo1").style.color = "black"
+        document.getElementById("codigo2").style.color = "black"
+        document.getElementById("codigo3").style.color = "black"
+        document.getElementById("codigo1").style.fontSize = "20px"
+        document.getElementById("codigo2").style.fontSize = "20px"
+        document.getElementById("codigo3").style.fontSize = "20px"
+    }
+
+    function colocarCodigo2(){
+        document.getElementById("codigo1").innerHTML = "let str1 = prefijoComunMasLargo(arr, low, mid);"
+    }
+
+    function colocarCodigo3(){
+        document.getElementById("codigo2").innerHTML = "return (prefijoComunDos(str1, str2));"
+    }
+
+    function colocarCodigo4(){
+        document.getElementById("codigo2").style.display = "none"
+        document.getElementById("codigo1").innerHTML = "let str2 = prefijoComunMasLargo(arr, mid + 1, high);"
+    }
+
+    function colocarCodigo5(){
+        document.getElementById("codigo2").style.display = "block"
+        document.getElementById("codigo2").innerHTML = "return (prefijoComunDos(str1, str2));"
+    }
+
+    function colocarCodigo6(){
+        document.getElementById("codigo1").style.display = "none"
+        document.getElementById("codigo2").style.display = "none"
+        document.getElementById("codigo3").innerHTML = "return (prefijoComunDos(str1, str2));"
+    }
+    function colocarArreglo(){
 
     $("#arreglo-Strings").empty();
 

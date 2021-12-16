@@ -331,6 +331,12 @@ a{
     
 }
 
+.codigo{
+    width:100%;
+    text-align: center;
+    margin:auto;
+}
+
 .separarCentrar-flex{
     display: flex;
     justify-content: space-around;
