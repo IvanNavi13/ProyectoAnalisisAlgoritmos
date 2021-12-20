@@ -122,25 +122,34 @@ h1,h2,h3{
     }
 }
 
-.boton{
-    background-color: var(--secundario);
-    color: var(--blanco);
-    padding: 2rem 3.5rem;
-    margin-top: 5rem;
-    font-size: 2.5rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: .5rem; /*Para tener las esquinas redondeadas*/
-    width: 90%;
+.boton {
+	box-shadow: 5px 6px 0px 0px #02457A;
+	background:linear-gradient(to bottom, #02457A 5%, #018ABE 100%);
+	background-color:#02457A;
+	border-radius:5px;
+	border:1px solid #018ABE;
+	/* display:inline-block;  */
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Quicksand', sans-serif; 
+	font-size: 25px;
+	font-weight:bold;
+	font-style:italic;
+	padding:18px 49px;
+    margin: 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #018ABE;
     text-align: center;
-    border: none;
 }
-@media (min-width: 768px) {
-    .boton{
-        width: auto;
-    }
+.boton:hover {
+	background:linear-gradient(to bottom, #018ABE 5%, #02457a 100%);
+	background-color:#018ABE;
 }
+/* .boton:active {
+	position:relative;
+	top:1px;
+}  */
+
 
 .circulo{
     max-width: 40rem;

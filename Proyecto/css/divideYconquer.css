@@ -433,3 +433,7 @@ a{
     justify-content: start;
 }
 
+.indenti-letras{
+    font-size: 22px;
+    font-weight:bold;
+}

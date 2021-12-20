@@ -19,9 +19,9 @@
 
     function colocarCodigo1(){
         document.getElementById("codigo1").innerHTML = "let mid = low + Math.floor((high - low) / 2);"
-        document.getElementById("codigo1").style.color = "black"
-        document.getElementById("codigo2").style.color = "black"
-        document.getElementById("codigo3").style.color = "black"
+        document.getElementById("codigo1").style.color = "#B00026"
+        document.getElementById("codigo2").style.color = "#FFC61A"
+        document.getElementById("codigo3").style.color = "#FFC61A"
         document.getElementById("codigo1").style.fontSize = "20px"
         document.getElementById("codigo2").style.fontSize = "20px"
         document.getElementById("codigo3").style.fontSize = "20px"
@@ -50,6 +50,31 @@
         document.getElementById("codigo2").style.display = "none"
         document.getElementById("codigo3").innerHTML = "return (prefijoComunDos(str1, str2));"
     }
+
+
+function identificarDyC(){
+
+    $("#identificarDyC").empty();
+
+    const str1 = document.getElementById("str1").value;
+    const str2 = document.getElementById("str2").value;
+    const str3 = document.getElementById("str3").value;
+    const str4 = document.getElementById("str4").value;
+
+    if(str1 == "" || str2 == "" || str3 == "" || str4 == "" )
+        console.log("No ha ingresado las 4 cadenas correspondientes!");
+    else{
+        let identiDyC =
+        
+        "<p class=\"indenti-letras\" style=\"color: #B00026;\">Divide</p>" +
+        "<p class=\"indenti-letras\" style=\"color: #FFC61A;\">Conquer</p>" ;
+    
+        $("#identificarDyC").append(identiDyC);
+        
+    }
+
+}
+
     function colocarArreglo(){
 
     $("#arreglo-Strings").empty();
