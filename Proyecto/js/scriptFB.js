@@ -54,10 +54,12 @@ function SoloMinusculas(e){
 }
 
 
-function mostrar() {
+function mostrar() {    
+    //document.getElementById("final").innerHTML = "No existe un prefijo común";
     const prefijo = document.getElementById("palabra5").innerHTML;
-    document.getElementById("final").innerHTML = "El prefijo más largo es: " + prefijo;
-    prefijo();          
+    document.getElementById("final").innerHTML = "El prefijo más largo es: " + prefijo;    
+    prefijo();      
+
 }
 
 
@@ -141,6 +143,7 @@ function codigo()
     document.getElementById("array2").innerHTML = "array[1]= " + str2;
     document.getElementById("array3").innerHTML = "array[2]= " + str3;
     document.getElementById("array4").innerHTML = "array[3]= " + str4;
+    
 }
 
 function codigo2(){
@@ -148,6 +151,7 @@ function codigo2(){
     document.getElementById("linea1").innerHTML = "let prefix = array[0]";
     document.getElementById("linea2").innerHTML = "for(let i = 1; i<=n-1; i++)";
     document.getElementById("linea3").innerHTML = "&nbsp;&nbsp;&nbsp;prefix = prefijoComunDos(prefix, array[i])";
+    
 }
 
 function codigo3()
@@ -157,6 +161,7 @@ function codigo3()
     document.getElementById("linea3").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;result +=str1[i]";
     document.getElementById("linea1").style.color = "#B60020"; 
     document.getElementById("linea3").style.color = "#8236CB";
+    
 }
 
 
@@ -218,6 +223,7 @@ function prefijo()
     }
     else {
         alert("No hay prefijo común");
+        document.getElementById("palabra5").innerHTML = "return -1";
         return -1;
     }
     
