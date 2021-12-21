@@ -437,3 +437,7 @@ a{
     font-size: 22px;
     font-weight:bold;
 }
+
+.texto-borde{
+    -webkit-text-stroke: 0.5px var(--primario);
+}

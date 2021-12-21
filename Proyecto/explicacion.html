@@ -48,48 +48,117 @@
 
         <main class="fondo-main">
 
-            <div class="dividir-dos">
-
-                <div class="cuadro-titulo">
-                    <h2 class="animate__animated animate__flash animate__infinite	infinite ">¿Qué es un prefijo?</h2>
+            <div class="flex-centro">
+                <div class="caja-texto-expli">
+                    <h2 class="color-letra animate__animated animate__flash animate__infinite	animate__repeat-3 ">¿Qué es un prefijo?</h2>
+    
+                    <p>Un prefijo se define como un elemento gramatical que se adhiere a un término para cambiar su significado,
+                        es decir que, se anteponen a la palabra que se desea modificar.</p>
                 </div>
-                
-                <p>Un prefijo se define como un elemento gramatical que se adhiere a un término para cambiar su significado,
-                     es decir que, se anteponen a la palabra que se desea modificar.</p>
             </div>
-            
-            
 
-            <div class="dividir-dos">
-                
-                <p>Por lo tanto, el presente problema consistirá en la implementación de un programa que identifique dicho prefijo,
-                    con apoyo de la solución directa y del mismo modo, con el paradigma algorítmico “Divide y Vencerás”. 
-                    Entonces, dado un conjunto de cadenas (4) se encontrará la cadena de prefijo común más larga,
-                    que es el prefijo de todas las cadenas dadas.
-                </p>
-                
-                <div class="cuadro-titulo">
-                    <h2 class="animate__animated animate__flash animate__infinite	infinite "> Problema </h2>
+            
+            <div class="flex-centro">
+                <div class="caja-texto-expli">
+                    <h2 class=" color-letra animate__animated animate__flash animate__infinite	animate__repeat-3 "> Problema </h2>
+    
+                    <p>Por lo tanto, el presente problema consistirá en la implementación de un programa que identifique dicho prefijo,
+                        con apoyo de la solución directa y del mismo modo, con el paradigma algorítmico “Divide y Vencerás”. 
+                        Entonces, dado un conjunto de cadenas (4) se encontrará la cadena de prefijo común más larga,
+                        que es el prefijo de todas las cadenas dadas.
+                    </p>
+                    
                 </div>
-
             </div>
-            
 
+            
             <div class="flex-centro">
                 <img src="./images/fondo_azul.png" alt="prefijo" class="imagen-prefijo">
             </div>
 
             <br><br><br>
             
-            <!-- <div >
-                <h2>Definición formal de la solución</h2>
-                <p></p>
-            </div> -->
+
+            <div class="flex-centro">
+                <div class="caja-texto-expli">
+                    <h2 class=" color-letra animate__animated animate__flash animate__infinite	animate__repeat-3 "> Definición formal de la solución mediante Fuerza Bruta </h2>
+    
+                    <p> Una forma sencilla de encontrar el prefijo común más largo compartido por un conjunto de cadenas LCP (S1 ... Sn)
+                         se puede encontrar bajo la observación de que:  </p>
+                    
+                    <p> LCP (S1… Sn) = LCP (LCP (LCP (S1, S2), S3),… .Sn) </p>
+
+                    <p>Para lograrlo, simplemente se itera a través de las cadenas [S1… Sn], encontrando en cada iteración i el prefijo
+                         común más largo de cadenas LCP (S1… Si). Cuando el LCP (S1… Si) es una cadena vacía, se puede devolver una cadena vacía.
+                          De lo contrario, después de n iteraciones, el algoritmo devolverá LCP (S1… Sn).</p>
+                   
+                    
+                </div>
+            </div>
+
+
+            <div class="flex-centro">
+                <div class="caja-texto-expli"> 
+                    <h2 class=" color-letra animate__animated animate__flash animate__infinite	animate__repeat-3 "> Definición formal de la solución mediante Divide y Vencerás </h2>
+    
+                    <p> La idea de este algoritmo está relacionada con la propiedad asociativa de la operación LCP. Observar que: LCP (S1… Sn) = LCP (LCP (S1… Sk), LCP (Sk + 1… Sn)), 
+                        donde LCP (S1… Sn) es el prefijo común más largo en el conjunto de cadenas [S1… Sn], 1 < k < n1 < k < n </p>
+                    
+                    <p>Por lo tanto, el enfoque de Dividir y Vencerás podría estar implícito dividiendo el problema LCP (Si… Sj) en dos subproblemas LCP (Si… Smid)
+                         y LCP (Smid + 1… Sj), donde mid es el medio del Si y Sj.</p>
+                   
+
+                </div>
+            </div>
+
+
+            <div class="flex-centro">
+                <div class="caja-texto-expli">
+                    <h2 class=" color-letra animate__animated animate__flash animate__infinite	animate__repeat-3 "> ¿Por qué DYC? </h2>
+    
+                    <p> Divide:  Porque se puede seguir dividiendo los problemas en dos subproblemas hasta que no se puedan dividir más.  </p>
+                    <p> Conquer: Para conquistar la solución, se compara las soluciones de los dos subproblemas hasta que no haya 
+                        coincidencia de caracteres en cada nivel. El prefijo común encontrado será la solución de LCP (Si… Sj).</p>
+                    
+                </div>
+            </div>
+
+
+            <div id="dos-columnas" >
+
+                <img src="./images/fondo_rojo.png" alt="prefijo" class="imagen-prefijo">
+
+                <img src="./images/fondo_verde.png" alt="prefijo" class="imagen-prefijo">
+
+            </div>
+
+            <br><br><br>
+
+            <div class="flex-centro">
+                <div class="caja-texto-expli">
+                    <h2 class=" color-letra animate__animated animate__flash animate__infinite	animate__repeat-3 "> Aplicaciones del problema </h2>
+    
+                    <p>Si bien los prefijos parecen tener una función específica en la gramática para añadir o cambiar el significado
+                         de una palabra, identificar el prefijo más largo de un conjunto de cadenas dentro de los programas es de gran
+                          ayuda, en especial en aplicaciones que permiten la edición de texto, con ello se puede:
+                    </p>
+                    <ul>
+                        <li>Identificar todas las palabras que comiencen de manera similar.</li>
+                        <li>Clasificar las palabras dentro de un tema común.    </li>
+                        <li>Buscar y sustituir las palabras con el prefijo común.   </li>
+                        <li>Dar formato específico al prefijo. </li>
+                        <li>Dentro de editores de código y de diseño de bases de datos se pueden definir prefijos
+                        para identificar variables dentro de una estructura o tabla, lo que su obtención hace más 
+                        sencillo su mantenimiento. </li>
+                      </ul>
+                    
+                </div>
+            </div>
 
 
             <div class="titulo-centrar">
                 <div>
-                    <h2 class="animate__animated animate__flash animate__infinite	infinite ">Análisis de la Cota</h2>
+                    <h2 class="animate__animated animate__flash animate__infinite	animate__repeat-3 ">Análisis de la Cota</h2>
                 </div>
             </div>
 

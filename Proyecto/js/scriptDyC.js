@@ -19,12 +19,15 @@
 
     function colocarCodigo1(){
         document.getElementById("codigo1").innerHTML = "let mid = low + Math.floor((high - low) / 2);"
-        document.getElementById("codigo1").style.color = "#B00026"
-        document.getElementById("codigo2").style.color = "#FFC61A"
-        document.getElementById("codigo3").style.color = "#FFC61A"
+        document.getElementById("codigo1").style.color = "#B00026" //B00026
+        document.getElementById("codigo2").style.color = "#6D27CA" //FFC61A amarillo
+        document.getElementById("codigo3").style.color = "#6D27CA"
         document.getElementById("codigo1").style.fontSize = "20px"
         document.getElementById("codigo2").style.fontSize = "20px"
         document.getElementById("codigo3").style.fontSize = "20px"
+        document.getElementById("codigo1").style.webkitTextStroke = "0.4px #B00026" //0.4px #001B48
+        document.getElementById("codigo2").style.webkitTextStroke = "0.4px #02457A"
+        document.getElementById("codigo3").style.webkitTextStroke = "0.4px #02457A"
     }
 
     function colocarCodigo2(){
@@ -66,8 +69,8 @@ function identificarDyC(){
     else{
         let identiDyC =
         
-        "<p class=\"indenti-letras\" style=\"color: #B00026;\">Divide</p>" +
-        "<p class=\"indenti-letras\" style=\"color: #FFC61A;\">Conquer</p>" ;
+        "<p class=\"indenti-letras texto-borde\" style=\"color: #B00026;\">Divide</p>" +
+        "<p class=\"indenti-letras texto-borde\" style=\"color: #6D27CA;\">Conquer</p>" ;
     
         $("#identificarDyC").append(identiDyC);
         

@@ -165,6 +165,16 @@ p{
     color: var(--secundario);
 }
 
+li{
+    font-size: 22px;
+    margin: 15px;
+    max-width: 1600px;
+    font-weight:bold;
+    text-align: justify;
+    color: var(--secundario);
+
+}
+
 .imagen-prefijo{
     max-width: 360px;
     max-height: auto;
@@ -267,5 +277,36 @@ p{
     justify-content: center;
 }
 
+.caja-texto-expli{
+    width: 1250px;
+    height: auto;
+    margin: 35px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(2,69,122,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(2,69,122,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(2,69,122,0.75);
+}
+
+.color-letra{
+    color: var(--primario);
+    font-weight: bold;
+}
+
+
+
+#dos-columnas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media (min-width: 480px) {
+    #dos-columnas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
 
 
