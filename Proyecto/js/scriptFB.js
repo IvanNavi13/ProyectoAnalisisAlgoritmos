@@ -8,6 +8,7 @@
 //Curso: Análisis de algoritmos
 //(C) Agosto-Enero 2021
 //ESCOM-IPN
+//Version 3.2
 
 //Algoritmo de prefijo comun mas largo para solucion Fuerza Bruta
 //*****************************************************************
